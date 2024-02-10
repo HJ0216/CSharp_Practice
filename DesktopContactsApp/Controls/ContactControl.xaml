@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="DesktopContactsApp.Controls.ContactControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DesktopContactsApp.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="85" d:DesignWidth="200">
+    <Grid Background="#AAE5E5E5">
+        <StackPanel Margin="5">
+            <TextBlock
+                x:Name="nameTextBlock"
+                FontSize="20"
+                FontWeight="Bold"
+                Text="Name LastName"
+                />
+            <TextBlock
+                x:Name="emailTextBlock"
+                Foreground="DodgerBlue"
+                FontSize="15"
+                Text="example@domain.com"
+                />
+            <TextBlock
+                x:Name="phoneTextBlock"
+                FontSize="20"
+                FontStyle="Italic"
+                Text="(82)10 2345 6789"
+                />
+        </StackPanel>
+    </Grid>
+</UserControl>

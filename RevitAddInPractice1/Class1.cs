@@ -26,6 +26,7 @@ namespace RevitAddInPractice1
                 .OfCategory(BuiltInCategory.OST_Walls);
             */
 
+            /* ElementMulticategoryFilter: a filter to match elements by built-in category
             List<BuiltInCategory> categories = new List<BuiltInCategory>()
             {
                 BuiltInCategory.OST_Walls,
@@ -36,7 +37,20 @@ namespace RevitAddInPractice1
 
             FilteredElementCollector collector = new FilteredElementCollector(document)
                 .WherePasses(elementMulticategoryFilter);
+            */
 
+            ElementClassFilter familyInstanceFilter = new ElementClassFilter(typeof(FamilyInstance));
+
+            // Create category filter for doors
+            ElementCategoryFilter doorCategoryFilter = new ElementCategoryFilter(BuiltInCategory.OST_Doors);
+
+            // Create a Logic and filter for all Door Family Instance
+            // Can use LogicalOrFilter
+            LogicalAndFilter doorInstancesFilter = new LogicalAndFilter(familyInstanceFilter, doorCategoryFilter);
+
+            // Apply the filter to the element in the active documnet
+            FilteredElementCollector collector = new FilteredElementCollector(document)
+                .WherePasses(doorInstancesFilter);
 
             SimpleForm simpleForm = new SimpleForm(collector);
             simpleForm.ShowDialog();

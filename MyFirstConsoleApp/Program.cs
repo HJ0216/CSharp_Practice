@@ -21,6 +21,10 @@ namespace MyFirstConsoleApp
             TryAnIf();
             TrySomeLoops();
             TryAnIfElse();
+
+            Class3 class3 = new Class3();
+            class3.mainMethod();
+
         }
 
         private static void TryAnIfElse()

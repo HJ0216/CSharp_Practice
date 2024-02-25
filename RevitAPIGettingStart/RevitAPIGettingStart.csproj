@@ -54,6 +54,7 @@
     <Compile Include="SampleCollector.cs" />
     <Compile Include="SampleCreateSharedParameter.cs" />
     <Compile Include="SampleDeleteElements.cs" />
+    <Compile Include="SampleIntersection.cs" />
     <Compile Include="SampleParametersType.cs" />
     <Compile Include="SampleWallChangeSize.cs" />
   </ItemGroup>

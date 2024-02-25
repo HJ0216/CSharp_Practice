@@ -34,26 +34,29 @@ namespace RevitAPIGettingStart
             //sampleDeleteElements.DeleteElement(uIDocument.Document);
             //sampleDeleteElements.DeleteElements(uIDocument.Document);
 
-/*            SampleCollector sampleCollector = new SampleCollector();
-            List<Wall> walls_Class = sampleCollector.GetWalls_Class(uIDocument.Document);
-            List<Wall> walls_ActiveView = sampleCollector.GetWalls_ActiveView(uIDocument.Document);
-            List<Wall> walls_Category = sampleCollector.GetWalls_Categoty(uIDocument.Document);
-            Wall wall= sampleCollector.GetWallByNameLINQ(uIDocument.Document, "외벽 - 스틸 스터드 벽돌벽");
-            Element element = sampleCollector.GetWallByNameLambda(uIDocument.Document, "외벽 - 스틸 스터드 벽돌벽");
+            /*            SampleCollector sampleCollector = new SampleCollector();
+                        List<Wall> walls_Class = sampleCollector.GetWalls_Class(uIDocument.Document);
+                        List<Wall> walls_ActiveView = sampleCollector.GetWalls_ActiveView(uIDocument.Document);
+                        List<Wall> walls_Category = sampleCollector.GetWalls_Categoty(uIDocument.Document);
+                        Wall wall= sampleCollector.GetWallByNameLINQ(uIDocument.Document, "외벽 - 스틸 스터드 벽돌벽");
+                        Element element = sampleCollector.GetWallByNameLambda(uIDocument.Document, "외벽 - 스틸 스터드 벽돌벽");
 
-            TaskDialog.Show("Values"
-                , "\n Walls using Class " + createStringBuilder(walls_Class).ToString()
-                + "\n Walls using Class In Active View " + createStringBuilder(walls_ActiveView).ToString()
-                + "\n Walls using Category " + createStringBuilder(walls_Category).ToString()
-                + "\n Wall using LINQ " + wall.Name + " " + wall.Id
-                + "\n Wall using Lambda " + element.Name + " " + element.Id
-                );*/
+                        TaskDialog.Show("Values"
+                            , "\n Walls using Class " + createStringBuilder(walls_Class).ToString()
+                            + "\n Walls using Class In Active View " + createStringBuilder(walls_ActiveView).ToString()
+                            + "\n Walls using Category " + createStringBuilder(walls_Category).ToString()
+                            + "\n Wall using LINQ " + wall.Name + " " + wall.Id
+                            + "\n Wall using Lambda " + element.Name + " " + element.Id
+                            );*/
 
             //SampleWallChangeSize sampleWallChangeSize = new SampleWallChangeSize();
             //sampleWallChangeSize.ChangeWallType(uIDocument.Document);
 
-            SampleCreateSharedParameter sampleCreateSharedParameter = new SampleCreateSharedParameter();
-            sampleCreateSharedParameter.CreateSampleSharedParameter(uIDocument.Document, application);
+            //SampleCreateSharedParameter sampleCreateSharedParameter = new SampleCreateSharedParameter();
+            //sampleCreateSharedParameter.CreateSampleSharedParameter(uIDocument.Document, application);
+
+            SampleIntersection sampleIntersection = new SampleIntersection();
+            sampleIntersection.FindIntersectionEvent(uIDocument.Document);
 
             return Result.Succeeded;
 

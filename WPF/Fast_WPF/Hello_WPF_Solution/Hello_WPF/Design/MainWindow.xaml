@@ -1,0 +1,87 @@
+﻿<Window x:Class="Hello_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hello_WPF"
+        mc:Ignorable="d"
+        Title="Hello WPF" Height="450" Width="800" 
+        Icon="/5448846_christmas_gift_socks_xmas_icon.png" 
+        IsEnabled="True" Visibility="Visible"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="SingleBorderWindow" ResizeMode="CanResize"
+        Topmost="True"
+        ShowInTaskbar="False"
+        MinHeight="200" MinWidth="200"
+        MaxHeight="500" MaxWidth="500"
+        >
+    <Grid>
+        <StackPanel>
+            <TextBlock 
+                Text="Hello"
+                FlowDirection="RightToLeft"
+                />
+            <TextBlock Text="Hello" Visibility="Collapsed"/>
+            <TextBlock Text="Hello"/>
+            <TextBlock Text="Hello" Visibility="Hidden"/>
+            <TextBlock Text="Hello"/>
+
+            <Button 
+                Cursor="Help"
+                Content="Click Me For New Window"
+                Click="Button_Click"
+                />
+
+            <Label 
+                Width="200"
+                Content="Label"
+                HorizontalAlignment="Right"
+                HorizontalContentAlignment="Center"
+                />
+            <Button Content="Button"/>
+            <TextBox
+                Width="50"
+                Text="Hello World"
+                TextAlignment="Center"
+                TextWrapping="Wrap"
+                CharacterCasing="Normal"
+                CaretBrush="DodgerBlue"
+                Focusable="True"
+                UndoLimit="10"
+                AcceptsReturn="True"
+                />
+            <!--
+            Default: -1
+            TextBox는 메모리 제한에 도달할 때까지 사용자의 모든 편집 작업을 저장하고, 이를 언제든지 '되돌릴' 수 있음
+            특정 숫자(예: 10)으로 설정하면, TextBox는 가장 최근에 실행된 10번의 편집 작업만을 '되돌릴' 수 있게 됨
+            -->
+            <ComboBox
+                Width="200" Height="50"
+                Background="Coral"
+                Text="Select a item"
+                IsEditable="True"
+                IsEnabled="False"
+                >
+            </ComboBox>
+            <ComboBox
+                Width="200" Height="50"
+                Text="Select a item"
+                Background="DodgerBlue"
+                IsEditable="True"
+                IsReadOnly="False"
+                IsTextSearchEnabled="True"
+                IsDropDownOpen="False"
+                MaxDropDownHeight="50"
+                SelectedIndex="0"
+                >
+                <ComboBoxItem Content="Apple" Background="Coral"/>
+                <ComboBoxItem Content="Banana"/>
+                <ComboBoxItem Content="Bus"/>
+                <ComboBoxItem Content="Coconut"/>
+                <Button Content="Hello"/>
+                <CheckBox/>
+            </ComboBox>
+        </StackPanel>
+
+    </Grid>
+</Window>

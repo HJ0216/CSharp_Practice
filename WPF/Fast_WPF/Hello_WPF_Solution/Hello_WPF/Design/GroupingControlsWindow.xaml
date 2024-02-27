@@ -1,0 +1,172 @@
+﻿<Window x:Class="Fast_WPF_In_CSharp.GroupingControlsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Fast_WPF_In_CSharp"
+        mc:Ignorable="d"
+        Title="GroupingControlsWindow" Height="450" Width="450">
+    <Grid Margin="30, 10">
+        <!--한 번에 컨트롤할 경우가 많으면,
+       Grid나 StackPanel 등으로 묶어서 컨트롤-->
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+
+            <Label 
+                Grid.Row="0" 
+                Content="Company title: "/>
+            <Label 
+                Grid.Row="1"
+                Content="Manager: "/>
+            <Label 
+                Grid.Row="2"
+                Content="Advertising: "/>
+            <Label 
+                Grid.Row="3"
+                Content="Tel: "/>
+            <Label 
+                Grid.Row="4"
+                Content="Mobile: "/>
+            <Label 
+                Grid.Row="5"
+                Content="Fax: "/>
+            <Label 
+                Grid.Row="6"
+                Content="Activity: "/>
+            <Label 
+                Grid.Row="7"
+                Content="Address: "/>
+            <Label 
+                Grid.Row="8"
+                Content="Email: "/>
+            <Label 
+                Grid.Row="9"
+                Content="WebSite: "/>
+            <Label 
+                Grid.Row="10"
+                Content="Language: "/>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            
+            <TextBox 
+                Grid.Row="0" 
+                Margin="5"
+                IsTabStop="True"
+                TabIndex="0"
+                />
+            <TextBox 
+                Grid.Row="1"
+                Margin="5"
+                IsTabStop="True"
+                TabIndex="1"
+                />
+            <TextBox 
+                Grid.Row="2"
+                Margin="5"
+                IsTabStop="True"
+                TabIndex="2"
+                />
+
+            <TextBox 
+                Grid.Row="3"
+                Margin="5"
+                IsTabStop="True"
+                TabIndex="3"
+                />
+            <TextBox 
+                Grid.Row="4"
+                Margin="5"
+                IsTabStop="True"
+                TabIndex="4"
+                />
+
+            <TextBox 
+                Grid.Row="5"
+                Margin="5"
+                IsTabStop="True"
+                TabIndex="5"
+                />
+            <TextBox 
+                Grid.Row="6"
+                Margin="5"
+                IsTabStop="True"
+                TabIndex="6"
+                />
+            <TextBox 
+                Grid.Row="7"
+                Margin="5"
+                IsTabStop="True"
+                TabIndex="7"
+                />
+            <TextBox 
+                Grid.Row="8"
+                Margin="5"
+                IsTabStop="True"
+                TabIndex="8"
+                />
+            <TextBox 
+                Grid.Row="9"
+                Margin="5"
+                IsTabStop="True"
+                TabIndex="9"
+                />
+
+            <ComboBox 
+                Grid.Row="10"
+                Margin="5"
+                SelectedIndex="0"
+                VerticalContentAlignment="Center"
+                IsTabStop="True"
+                TabIndex="10"
+                >
+                <ComboBoxItem Content="English"/>
+                <ComboBoxItem Content="Korean"/>
+            </ComboBox>
+
+            <Button
+                Grid.Row="11"
+                Margin="0 15"
+                Cursor="Hand"
+                Content="Save Changes F5"
+                IsTabStop="True"
+                TabIndex="11"
+                />
+            <!--위치를 활용하여 화면에서 Order 처리할 수 있음-->
+            
+        </Grid>
+    </Grid>
+</Window>

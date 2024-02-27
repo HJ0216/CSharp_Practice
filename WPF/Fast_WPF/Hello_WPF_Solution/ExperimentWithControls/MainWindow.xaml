@@ -1,0 +1,147 @@
+﻿<Window x:Class="ExperimentWithControls.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExperimentWithControls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label
+            Grid.Row="0" Grid.Column="0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="10"
+            FontSize="18"
+            Content="Enter a number"
+            />
+
+        <TextBlock
+            x:Name="number"
+            Grid.Row="0" Grid.Column="1"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            TextWrapping="Wrap"
+            FontSize="24"
+            Text="#"
+            />
+
+        <TextBox
+            x:Name="numberTextBox"
+            Grid.Row="0" Grid.Column="0"
+            Width="120"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="10 50 0 0"
+            FontSize="18"
+            TextWrapping="Wrap"
+            Text="0"
+            TextChanged="numberTextBox_TextChanged"
+            PreviewTextInput="numberTextBox_PreviewTextInput"
+            />
+
+        <StackPanel
+            Grid.Row="0" Grid.Column="0"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Margin="5"
+            >
+            <RadioButton 
+                Content="1"
+                Checked="RadioButton_Checked"
+                />
+            <RadioButton 
+                Content="2"
+                Checked="RadioButton_Checked"
+                />
+            <RadioButton 
+                Content="3"
+                Checked="RadioButton_Checked"
+                />
+            <RadioButton 
+                Content="4"
+                Checked="RadioButton_Checked"
+                />
+            <RadioButton 
+                Content="5"
+                Checked="RadioButton_Checked"
+                />
+        </StackPanel>
+
+        <ListBox
+            x:Name="myListBox"
+            Grid.Row="1" Grid.Column="0"
+            Margin="10"
+            SelectionChanged="myListBox_SelectionChanged"
+            >
+            <ListBoxItem Content="1"/>
+            <ListBoxItem Content="2"/>
+            <ListBoxItem Content="3"/>
+            <ListBoxItem Content="4"/>
+            <ListBoxItem Content="5"/>
+        </ListBox>
+
+        <ComboBox
+            x:Name="readOnlyComboBox"
+            Grid.Row="1" Grid.Column="1"
+            Width="120"
+            Margin="10"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            SelectionChanged="readOnlyComboBox_SelectionChanged"
+            >
+            <ComboBoxItem Content="1"/>
+            <ComboBoxItem Content="2"/>
+            <ComboBoxItem Content="3"/>
+            <ComboBoxItem Content="4"/>
+            <ComboBoxItem Content="5"/>
+        </ComboBox>
+        <ComboBox
+            x:Name="editableComboBox"
+            Grid.Row="1" Grid.Column="1"
+            Width="120"
+            Margin="10"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            IsEditable="True"
+            PreviewTextInput="numberTextBox_PreviewTextInput"
+            TextBoxBase.TextChanged="editableComboBox_TextChanged"
+            >
+            <ComboBoxItem Content="1"/>
+            <ComboBoxItem Content="2"/>
+            <ComboBoxItem Content="3"/>
+            <ComboBoxItem Content="4"/>
+            <ComboBoxItem Content="5"/>
+        </ComboBox>
+
+        <Slider
+            x:Name="smallSlider"
+            Grid.Row="2" Grid.Column="1"
+            Margin="10"
+            AutoToolTipPlacement="TopLeft"
+            Minimum="1" Maximum="5"
+            ValueChanged="smallSlider_ValueChanged"
+            />
+        <Slider
+            x:Name="bigSlider"
+            Grid.Row="2" Grid.ColumnSpan="2"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Stretch"
+            Margin="10"
+            AutoToolTipPlacement="TopLeft"
+            Minimum="1111111111" Maximum="99999999999"
+            Value="9876543210"
+            ValueChanged="bigSlider_ValueChanged"
+            />
+    </Grid>
+</Window>

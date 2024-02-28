@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\bye_loopy.png" />
+    <None Remove="Assets\default_loopy.png" />
+    <None Remove="Assets\exercise_loopy.png" />
+    <None Remove="Assets\music_loopy.png" />
+    <None Remove="Assets\power_off.png" />
+    <None Remove="Assets\shortcut_loopy.png" />
+    <None Remove="Assets\surprise_loopy.png" />
+    <None Remove="double_heart_loopy.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\bye_loopy.png" />
+    <Resource Include="Assets\default_loopy.png" />
+    <Resource Include="Assets\exercise_loopy.png" />
+    <Resource Include="Assets\music_loopy.png" />
+    <Resource Include="Assets\power_off.png" />
+    <Resource Include="Assets\shortcut_loopy.png" />
+    <Resource Include="Assets\surprise_loopy.png" />
+    <Resource Include="double_heart_loopy.png" />
+  </ItemGroup>
+
+</Project>

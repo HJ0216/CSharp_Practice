@@ -13,6 +13,7 @@ CSharp_Practice
 │   └── RevitAddInPractice1  
 │  
 └── WPF  
+    ├── CS_Design_Pro  
     ├── Fast_WPF  
     ├── WPF_MVVM_Tutorial  
     └── WPF_Masterclass  
@@ -32,6 +33,7 @@ CSharp_Practice
 * [RevitAddInPractice1](https://www.youtube.com/playlist?list=PLABAnZRsrrL4xoeLvEmqtayeRC5b5GuwU)
 
 ### WPF
+* [CS_Design_Pro](https://www.youtube.com/@CSharpDesignPro/videos)
 * [Fast_WPF](https://www.udemy.com/course/fast-wpf-in-c-windows-presentation-foundation-for-beginners/?couponCode=ST22FS22724)
 * [WPF_MVVM_Tutorial](https://www.youtube.com/playlist?list=PLA8ZIAm2I03hS41Fy4vFpRw8AdYNBXmNm)
 * [WPF_Masterclass](https://www.udemy.com/course/windows-presentation-foundation-masterclass/?couponCode=ST22FS22724)

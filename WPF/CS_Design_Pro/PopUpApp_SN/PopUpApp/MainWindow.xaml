@@ -1,0 +1,120 @@
+﻿<Window x:Class="PopUpApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PopUpApp"
+        xmlns:uc="clr-namespace:PopUpApp.UserControls"
+        mc:Ignorable="d"
+        Title="MainWindow" 
+        Height="800" Width="1400"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        >
+    <Grid>
+        <Grid Margin="20" Background="White">
+            <Grid.Effect>
+                <DropShadowEffect
+                    BlurRadius="30"
+                    ShadowDepth="2"
+                    Direction="-90"
+                    Color="Gray"
+                    />
+            </Grid.Effect>
+            <StackPanel
+                Width="100"
+                HorizontalAlignment="Left"
+                Background="GhostWhite"
+                >
+                <Button
+                    x:Name="Home"
+                    Height="100"
+                    Margin="0 180 0 20"
+                    Background="Transparent"
+                    BorderBrush="Transparent"
+                    MouseEnter="Home_MouseEnter"
+                    MouseLeave="Home_MouseLeave"
+                    Style="{DynamicResource sidebar_button_style}"
+                    >
+                    <Image Source="Resources\Images\home_icon.png" Stretch="None"/>
+                </Button>
+                <Button
+                    x:Name="Profile"
+                    Height="100"
+                    Margin="0 0 0 10"
+                    Background="Transparent"
+                    BorderBrush="Transparent"
+                    MouseEnter="Profile_MouseEnter"
+                    MouseLeave="Profile_MouseLeave"
+                    Style="{DynamicResource sidebar_button_style}"
+                    >
+                    <Image Source="Resources\Images\profile_icon.png" Stretch="None"/>
+
+                </Button>
+                <Button
+                    x:Name="Settings"
+                    Height="100"
+                    Margin="0 10 0 0"
+                    Background="Transparent"
+                    BorderBrush="Transparent"
+                    MouseEnter="Settings_MouseEnter"
+                    MouseLeave="Settings_MouseLeave"
+                    Style="{DynamicResource sidebar_button_style}"
+                    >
+                    <Image Source="Resources\Images\settings_icon.png" Stretch="None"/>
+
+                </Button>
+            </StackPanel>
+            <Grid
+                Height="80"
+                VerticalAlignment="Top"
+                Background="Lavender"
+                >
+                <TextBlock
+                    Text="Hello WPF"
+                    FontFamily="open sans condensed"
+                    FontSize="26"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Foreground="#14212B"
+                    />
+                <Button
+                    Height="40" Width="40"
+                    Margin="0 0 20 0"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Right"
+                    Click="Button_Click"
+                    Style="{DynamicResource close_button_style}"
+                    >
+                    <Image Source="Resources\Images\power_off.png" Stretch="Fill"/>
+                </Button>
+
+            </Grid>
+            <Grid
+                Height="80"
+                VerticalAlignment="Bottom"
+                Background="Lavender"
+                >
+            </Grid>
+
+
+            <Popup
+                x:Name="PopUp_UC"
+                AllowsTransparency="True"
+                HorizontalOffset="10"
+                VerticalOffset="10"
+                >
+                <Grid>
+                    <uc:PopUpUserControl x:Name="Header"/>
+                </Grid>
+                
+            </Popup>
+        </Grid>
+
+        
+    </Grid>
+</Window>

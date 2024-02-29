@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Images\home_icon.png" />
+    <None Remove="Resources\Images\power_off.png" />
+    <None Remove="Resources\Images\profile_icon.png" />
+    <None Remove="Resources\Images\settings_icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Images\home_icon.png" />
+    <Resource Include="Resources\Images\power_off.png" />
+    <Resource Include="Resources\Images\profile_icon.png" />
+    <Resource Include="Resources\Images\settings_icon.png" />
+  </ItemGroup>
+
+</Project>

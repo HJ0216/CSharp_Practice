@@ -56,9 +56,13 @@ namespace RevitAddInPractice1
             */
 
             ElementId builtInCategoryId = new ElementId(BuiltInCategory.OST_Walls);
-            Enum.GetValues(typeof(BuiltInCategory))
-                .OfType<BuiltInCategory>()
+            // builtInCategoryId의 IntegerValue 속성은 BuiltInCategory.OST_Walls의 정수 표현
+            var builtInCategory = Enum.GetValues(typeof(BuiltInCategory))
+                // Enum.GetValues 메서드는 Array 타입을 반환
+                // Array는 object 타입의 요소들을 포함하고 있어, 반환된 값들을 직접적으로 BuiltInCategory 타입으로 다루기는 어려움
+                .OfType<BuiltInCategory>() // 지정된 타입의 요소만 필터링하여 반환
                 .FirstOrDefault(x => (int)x == builtInCategoryId.IntegerValue);
+                // x는 BuiltInCategory 열거형의 각각의 값을 대표
 
             return Result.Succeeded;
         }

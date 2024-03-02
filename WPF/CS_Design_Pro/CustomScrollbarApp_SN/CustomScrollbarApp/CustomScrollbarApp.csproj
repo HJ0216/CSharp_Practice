@@ -8,4 +8,14 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Resources\Icon_Souces.txt" />
+    <None Remove="Resources\up_icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Icon_Souces.txt" />
+    <Resource Include="Resources\Icons\up_icon.png" />
+  </ItemGroup>
+
 </Project>

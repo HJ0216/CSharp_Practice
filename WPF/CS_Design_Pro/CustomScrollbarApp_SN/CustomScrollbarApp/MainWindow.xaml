@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:CustomScrollbarApp"
         mc:Ignorable="d"
         Title="MainWindow" 
-        Height="450" Width="800"
+        Height="680" Width="880"
         WindowStyle="None"
         ResizeMode="NoResize"
         Topmost="True"
@@ -15,11 +15,104 @@
         AllowsTransparency="True"
         >
     <Window.Resources>
+        <ImageBrush 
+            x:Key="UpArrow_Default"
+            ImageSource="Resources\Icons\up_icon.png"
+            />
+        <ImageBrush 
+            x:Key="DownArrow_Default"
+            ImageSource="Resources\Icons\down_icon.png"
+            />
         <Style TargetType="ScrollBar">
             <Setter Property="SnapsToDevicePixels" Value="True"/>
             <Setter Property="OverridesDefaultStyle" Value="True"/>
-            <!--7:33-->
+
+            <Style.Triggers>
+                <Trigger
+                    Property="Orientation"
+                    Value="Vertical"
+                    >
+                    <Setter Property="Width" Value="80"/>
+                    <Setter Property="Height" Value="490"/>
+                    <Setter Property="Margin" Value="20"/>
+                    
+                    <!--// Create a Style template for the Scrollbar //-->
+                    <Setter
+                        Property="Template"
+                        Value="{DynamicResource VerticalScrollbar}"/>
+                </Trigger>
+            </Style.Triggers>
         </Style>
+        
+        <!--// Templeate for the scroll //-->
+        <ControlTemplate
+            x:Key="VerticalScrollbar"
+            TargetType="{x:Type ScrollBar}"
+            >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="80"/>
+                </Grid.RowDefinitions>
+
+                <Border
+                    Grid.Row="1"
+                    CornerRadius="20"
+                    Margin="10"
+                    Background="#CAC8E0"
+                    />
+
+                <RepeatButton
+                    Focusable="False"
+                    Height="80"
+                    BorderThickness="0"
+                    Command="ScrollBar.LineUpCommand"
+                    Background="{StaticResource UpArrow_Default}"
+                    />
+                <RepeatButton
+                    Grid.Row="2"
+                    Focusable="False"
+                    Height="80"
+                    BorderThickness="0"
+                    Command="ScrollBar.LineDownCommand"
+                    Background="{StaticResource DownArrow_Default}"
+                    />
+
+
+
+                <Track
+                    Name="PART_Track"
+                    Grid.Row="1"
+                    IsDirectionReversed="True"
+                    >
+                    <Track.DecreaseRepeatButton>
+                        <RepeatButton
+                            Margin="3 2"
+                            Command="ScrollBar.PageUpCommand"
+                            />
+                    </Track.DecreaseRepeatButton>
+
+                    <Track.Thumb>
+                        <Thumb>
+                            <!--// Add Style //-->
+                        </Thumb>
+                    </Track.Thumb>
+
+                    <Track.IncreaseRepeatButton>
+                        <RepeatButton
+                            Margin="3 2"
+                            Command="ScrollBar.PageDownCommand"
+                            />
+                        
+                        <!--// Add Style //-->
+                        
+                    </Track.IncreaseRepeatButton>
+                </Track>
+
+            </Grid>
+        </ControlTemplate>
+        
     </Window.Resources>
     
     <Grid>

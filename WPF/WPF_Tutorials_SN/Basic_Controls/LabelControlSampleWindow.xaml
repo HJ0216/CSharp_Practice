@@ -1,0 +1,46 @@
+﻿<Window x:Class="Basic_Controls.LabelControlSampleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Basic_Controls"
+        mc:Ignorable="d"
+        Title="LabelControlSampleWindow" 
+        Height="180" Width="250">
+    <StackPanel>
+        <Label Content="This is a Label Control"/>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+                <Label Target="{Binding ElementName=textName}">
+                    <!--Alt N 누를 경우, Target에 Focusing-->
+                    <StackPanel>
+                        <Image Width="50" Height="50" Source="Resources\loopy_glasses.png"/>
+                        <!--
+                        /WpfTutorialSamples;: 애플리케이션 또는 라이브러리의 어셈블리 이름
+                        /component: 이 부분은 리소스가 어셈블리 내에 포함되어 있다는 것을 나타내며, 
+                                    이 키워드 다음에 리소스의 상대 경로가 옵니다.-->
+                        <AccessText Text="_Name: "/>
+                    </StackPanel>
+                </Label>
+                <TextBox Name="textName"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1">
+                <Label Target="{Binding ElementName=textMail}">
+                    <StackPanel>
+                        <Image Width="50" Height="50" Source="Resources\loopy_rose.png"/>
+                        <AccessText Text="_Mail: "/>
+                    </StackPanel>
+                </Label>
+                <TextBox Name="textMail"/>
+            </StackPanel>
+        </Grid>
+        
+    </StackPanel>
+</Window>

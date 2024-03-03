@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\loopy_glasses.png" />
+    <None Remove="Resources\loopy_rose.png" />
+    <None Remove="Resources\loopy_swing.png" />
+    <None Remove="Resources\loopy_triangle.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\loopy_glasses.png" />
+    <Resource Include="Resources\loopy_rose.png" />
+    <Resource Include="Resources\loopy_swing.png" />
+    <Resource Include="Resources\loopy_triangle.png" />
+  </ItemGroup>
+
+</Project>

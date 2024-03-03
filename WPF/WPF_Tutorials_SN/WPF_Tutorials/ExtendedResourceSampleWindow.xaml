@@ -1,0 +1,43 @@
+﻿<Window x:Class="WPF_Application.ExtendedResourceSampleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Application"
+        mc:Ignorable="d"
+        Title="ExtendedResourceSampleWindow" 
+        Height="450" Width="800"
+        Background="{DynamicResource WindowBackgroundBrush}"
+        >
+    <!--Window의 Background가 WindowBackgroundBrush보다 먼저 선언되므로 DynamicResource로 선언해야 함-->
+    <Window.Resources>
+        <sys:String x:Key="comboBoxTitle">Items: </sys:String>
+        
+        <x:Array x:Key="comboBoxItems" Type="sys:String">
+            <sys:String>Item #1</sys:String>
+            <sys:String>Item #2</sys:String>
+            <sys:String>Item #3</sys:String>
+        </x:Array>
+
+        <LinearGradientBrush x:Key="WindowBackgroundBrush">
+            <GradientStop Offset="0" Color="AliceBlue"/>
+            <GradientStop Offset="1" Color="DodgerBlue"/>
+        </LinearGradientBrush>
+    </Window.Resources>
+
+    <StackPanel Margin="10">
+        <Label Content="{StaticResource comboBoxTitle}"/>
+        <ComboBox ItemsSource="{StaticResource comboBoxItems}"/>
+        <Grid>
+            <StackPanel Margin="10">
+                <StackPanel.Resources>
+                    <sys:String x:Key="comboBoxTitle2">Items2: </sys:String>
+                </StackPanel.Resources>
+                <Label Content="{StaticResource comboBoxTitle2}"/>
+            </StackPanel>
+        </Grid>
+        <Label Content="{StaticResource comboBoxTitle3}"/>
+    </StackPanel>
+    
+</Window>

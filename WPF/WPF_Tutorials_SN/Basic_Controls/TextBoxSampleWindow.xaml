@@ -1,0 +1,25 @@
+﻿<Window x:Class="Basic_Controls.TextBoxSampleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Basic_Controls"
+        mc:Ignorable="d"
+        Title="TextBoxSampleWindow" Height="250" Width="250">
+    <StackPanel Margin="10">
+        <TextBox Text="Hello, World!"
+                 AcceptsReturn="True"
+                 TextWrapping="Wrap"
+                 />
+        <DockPanel Margin="10">
+            <TextBox SelectionChanged="TextBox_SelectionChanged"
+                     DockPanel.Dock="Top"
+                     />
+            <TextBox Name="textStatus" 
+                     AcceptsReturn="True"
+                     TextWrapping="Wrap"
+                     IsReadOnly="True"
+                     />
+        </DockPanel>
+    </StackPanel>
+</Window>

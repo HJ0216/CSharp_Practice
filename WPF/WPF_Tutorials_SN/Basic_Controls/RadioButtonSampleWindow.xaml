@@ -1,0 +1,26 @@
+﻿<Window x:Class="Basic_Controls.RadioButtonSampleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Basic_Controls"
+        mc:Ignorable="d"
+        Title="RadioButtonSampleWindow" Height="250" Width="250">
+    <StackPanel Margin="10">
+        <Label FontWeight="Bold">Are you Ready?</Label>
+        <RadioButton GroupName="ready">
+            <WrapPanel>
+                <Image Source="/Basic_Controls;component/Resources/loopy_glasses.png"
+                       Width="15" Height="15"/>
+                <TextBlock Text="Yes" Foreground="Green"/>
+            </WrapPanel>
+        </RadioButton>
+        <RadioButton GroupName="ready" Content="No"/>
+        <RadioButton GroupName="ready" IsChecked="True" Content="Maybe.."/>
+
+        <Label FontWeight="Bold">Are you Sure?</Label>
+        <RadioButton GroupName="sure" Content="Yes"/>
+        <RadioButton GroupName="sure" Content="No"/>
+        <RadioButton GroupName="sure" IsChecked="True" Content="Maybe.."/>
+    </StackPanel>
+</Window>

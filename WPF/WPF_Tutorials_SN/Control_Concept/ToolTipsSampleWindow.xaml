@@ -1,0 +1,84 @@
+﻿<Window x:Class="Control_Concept.ToolTipsSampleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Control_Concept"
+        mc:Ignorable="d"
+        Title="ToolTipsSampleWindow" Height="150" Width="400">
+    <StackPanel VerticalAlignment="Top"
+          HorizontalAlignment="Center"
+          >
+        <Button ToolTip="Click here and something will happen!"
+                Content="Click Here!"
+                />
+
+        <DockPanel>
+            <ToolBar DockPanel.Dock="Top">
+                <Button ToolTip="Create a new File"
+                        ToolTipService.ShowDuration="2000"
+                        >
+                    <Button.Content>
+                        <Image Source="/Resources/loopy2_1.png" 
+                               Width="16" Height="16"
+                               />
+                    </Button.Content>
+                </Button>
+                <Button>
+                    <Button.Content>
+                        <Image Source="/Resources/loopy2_2.png" 
+                               Width="16" Height="16"
+                               />
+                    </Button.Content>
+                    <Button.ToolTip>
+                        <StackPanel>
+                            <TextBlock Margin="0 0 0 5"
+                                       FontSize="14" FontWeight="Bold"
+                                       Text="Open File"
+                                       />
+                            <TextBlock>
+                                Search your computer or local network
+                                <LineBreak/>
+                                for a file and open it for editing.
+                            </TextBlock>
+                            <Border Margin="0 8"
+                                    BorderBrush="Salmon"
+                                    BorderThickness="0 1 0 0 "
+                                    />
+                            <WrapPanel>
+                                <Image Source="/Resources/loopy2_3.png" 
+                                       Width="16" Height="16"
+                                       Margin="0 0 5 0"
+                                       />
+                                <TextBlock FontStyle="Italic"
+                                           Text="Press F1 for more help."
+                                           />
+                            </WrapPanel>
+                        </StackPanel>
+                    </Button.ToolTip>
+                </Button>
+            </ToolBar>
+
+            <Grid>
+                <TextBox Name="editorTextBox" Text=""/>
+                <TextBlock Text="Editor Here..."
+                           IsHitTestVisible="False"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"
+                           >
+                    <TextBlock.Style>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="Visibility" Value="Hidden"/>
+                            <Setter Property="Foreground" Value="Gray"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Text, ElementName=editorTextBox}" Value="">
+                                    <Setter Property="Visibility" Value="Visible"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
+            </Grid>
+        </DockPanel>
+    </StackPanel>
+</Window>

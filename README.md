@@ -16,7 +16,8 @@ CSharp_Practice
     ├── CS_Design_Pro  
     ├── Fast_WPF  
     ├── WPF_MVVM_Tutorial  
-    └── WPF_Masterclass  
+    ├── WPF_Masterclass  
+    └──WPF_Tutorials_SN
 ```
 
 
@@ -37,3 +38,4 @@ CSharp_Practice
 * [Fast_WPF](https://www.udemy.com/course/fast-wpf-in-c-windows-presentation-foundation-for-beginners/?couponCode=ST22FS22724)
 * [WPF_MVVM_Tutorial](https://www.youtube.com/playlist?list=PLA8ZIAm2I03hS41Fy4vFpRw8AdYNBXmNm)
 * [WPF_Masterclass](https://www.udemy.com/course/windows-presentation-foundation-masterclass/?couponCode=ST22FS22724)
+* [WPF_Tutorials_SN](https://wpf-tutorial.com/)

@@ -1,0 +1,40 @@
+﻿<Window x:Class="Common_Interface_Controls.MenuSampleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Common_Interface_Controls"
+        mc:Ignorable="d"
+        Title="MenuSampleWindow" Height="200" Width="200">
+    <Window.CommandBindings>
+        <CommandBinding Command="New"
+                        CanExecute="NewCommandBinding_CanExecute"
+                        Executed="NewCommandBinding_Executed"
+                        />
+    </Window.CommandBindings>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="_New" Command="New" />
+                <MenuItem Header="_Open"/>
+                <MenuItem Header="_Save"/>
+                <Separator/>
+                <MenuItem Header="_Exit"/>
+            </MenuItem>
+            <MenuItem Header="_Tools">
+                <MenuItem Header="_Manage users">
+                    <MenuItem.Icon>
+                        <Image Source="/Common_Interface_Controls;component/Resources/loopy2_4.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="_Show groups" IsCheckable="True" IsChecked="True"/>
+            </MenuItem>
+            <MenuItem Header="_Edit">
+                <MenuItem Command="Cut"/>
+                <MenuItem Command="Copy"/>
+                <MenuItem Command="Paste"/>
+            </MenuItem>
+        </Menu>
+        <TextBox DockPanel.Dock="Top" Name="textEditor" AcceptsReturn="True"/>
+    </DockPanel>
+</Window>

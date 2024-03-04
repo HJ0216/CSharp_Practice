@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_Application", "WPF_Tutorials\WPF_Application.csproj", "{EC4D3F4C-FD0B-45A3-8412-901E40F98863}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_Application", "WPF_Tutorials\WPF_Application.csproj", "{EC4D3F4C-FD0B-45A3-8412-901E40F98863}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basic_Controls", "Basic_Controls\Basic_Controls.csproj", "{4151CCFD-ACBF-416B-971D-528BA7D61FE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basic_Controls", "Basic_Controls\Basic_Controls.csproj", "{4151CCFD-ACBF-416B-971D-528BA7D61FE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Control_Concept", "Control_Concept\Control_Concept.csproj", "{691DB975-206C-4184-8701-901D5FB9821A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Control_Concept", "Control_Concept\Control_Concept.csproj", "{691DB975-206C-4184-8701-901D5FB9821A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panel", "Panel\Panel.csproj", "{DA594B02-BA86-4216-998D-A199DE0A0870}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panel", "Panel\Panel.csproj", "{DA594B02-BA86-4216-998D-A199DE0A0870}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserControls", "UserControls\UserControls.csproj", "{118E9D27-7092-4580-B007-D5FBFA14ABCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserControls", "UserControls\UserControls.csproj", "{118E9D27-7092-4580-B007-D5FBFA14ABCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common_Interface_Controls", "Common_Interface_Controls\Common_Interface_Controls.csproj", "{6E496DBC-C617-41F2-94DC-808E5C617A29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common_Interface_Controls", "Common_Interface_Controls\Common_Interface_Controls.csproj", "{6E496DBC-C617-41F2-94DC-808E5C617A29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabControls", "TabControls\TabControls.csproj", "{9A11BA3F-73BE-47A3-88F8-0B7B440908AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{6E496DBC-C617-41F2-94DC-808E5C617A29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E496DBC-C617-41F2-94DC-808E5C617A29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E496DBC-C617-41F2-94DC-808E5C617A29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A11BA3F-73BE-47A3-88F8-0B7B440908AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A11BA3F-73BE-47A3-88F8-0B7B440908AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A11BA3F-73BE-47A3-88F8-0B7B440908AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A11BA3F-73BE-47A3-88F8-0B7B440908AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

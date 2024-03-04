@@ -1,8 +1,8 @@
-﻿<Application x:Class="Common_Interface_Controls.App"
+﻿<Application x:Class="TabControls.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Common_Interface_Controls"
-             StartupUri="StatusBarSampleWindow.xaml">
+             xmlns:local="clr-namespace:TabControls"
+             StartupUri="TabControlSampleWindow.xaml">
     <Application.Resources>
          
     </Application.Resources>

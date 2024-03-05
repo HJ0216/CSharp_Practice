@@ -1,0 +1,69 @@
+﻿<Window x:Class="List_Controls.WindowListBoxSample"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:List_Controls"
+        mc:Ignorable="d"
+        Title="WindowListBoxSample" Height="120" Width="200">
+    <StackPanel Margin="10">
+        <ListBox>
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/List_Controls;component/Resources/loopy0_4.png"
+                           Width="15" Height="15"/>
+                    <TextBlock Text="LIstbox Item #1"/>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/List_Controls;component/Resources/loopy0_4.png"
+                           Width="15" Height="15"/>
+                    <TextBlock Text="LIstbox Item #2"/>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/List_Controls;component/Resources/loopy0_4.png"
+                           Width="15" Height="15"/>
+                    <TextBlock Text="LIstbox Item #3"/>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/List_Controls;component/Resources/loopy0_4.png"
+                           Width="15" Height="15"/>
+                    <TextBlock Text="LIstbox Item #4"/>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/List_Controls;component/Resources/loopy0_4.png"
+                           Width="15" Height="15"/>
+                    <TextBlock Text="LIstbox Item #5"/>
+                </StackPanel>
+            </ListBoxItem>
+        </ListBox>
+        <ListBox Name="toDoList"
+                 HorizontalContentAlignment="Stretch"
+                 >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0 2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="100"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" 
+                                   Text="{Binding Title}"
+                                   />
+                        <ProgressBar Grid.Column="1" 
+                                     Minimum="0" Maximum="100" 
+                                     Value="{Binding Completion}" 
+                                     />
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </StackPanel>
+</Window>

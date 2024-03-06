@@ -1,0 +1,34 @@
+﻿<Window x:Class="List_Controls.WindowComboBoxSample"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:List_Controls"
+        mc:Ignorable="d"
+        Title="WindowComboBoxSample" Height="150" Width="200">
+    <StackPanel Margin="10">
+        <ComboBox>
+            <ComboBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/List_Controls;component/Resources/loopy0_5.png"
+                           Width="15" Height="15"/>
+                    <TextBlock Text="ComboBox Item #1"/>
+                </StackPanel>
+            </ComboBoxItem>
+            <ComboBoxItem IsSelected="True">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/List_Controls;component/Resources/loopy0_5.png"
+                           Width="15" Height="15"/>
+                    <TextBlock Text="ComboBox Item #2"/>
+                </StackPanel>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/List_Controls;component/Resources/loopy0_5.png"
+                           Width="15" Height="15"/>
+                    <TextBlock Text="ComboBox Item #3"/>
+                </StackPanel>
+            </ComboBoxItem>
+        </ComboBox>
+    </StackPanel>
+</Window>

@@ -11,13 +11,11 @@
   <ItemGroup>
     <None Remove="Resources\loopy0_4.png" />
     <None Remove="Resources\loopy0_5.png" />
-    <None Remove="Resources\loopy0_6.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Resources\loopy0_4.png" />
     <Resource Include="Resources\loopy0_5.png" />
-    <Resource Include="Resources\loopy0_6.png" />
   </ItemGroup>
 
 </Project>

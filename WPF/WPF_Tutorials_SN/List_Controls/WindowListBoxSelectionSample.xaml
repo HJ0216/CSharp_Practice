@@ -1,0 +1,47 @@
+﻿<Window x:Class="List_Controls.WindowListBoxSelectionSample"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:List_Controls"
+        mc:Ignorable="d"
+        Title="WindowListBoxSelectionSample" Height="250" Width="450">
+    <DockPanel Margin="10">
+        <StackPanel DockPanel.Dock="Right" Margin="10 0">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Margin" Value="0 0 0 5"/>
+                </Style>
+            </StackPanel.Resources>
+            <TextBlock FontWeight="Bold" Margin="0 0 0 10" Text="ListBox Selection"/>
+            <Button Name="buttonShowSelectedItem" Click="buttonShowSelectedItem_Click" Content="Show Selected"/>
+            <Button Name="buttonSelectLast" Click="buttonSelectLast_Click" Content="Select Last"/>
+            <Button Name="buttonSelectNext" Click="buttonSelectNext_Click" Content="Select Next"/>
+            <Button Name="buttonSelectCSharp" Click="buttonSelectCSharp_Click" Content="Selecte C#"/>
+            <Button Name="buttonSelectAll" Click="buttonSelectAll_Click" Content="Select All"/>
+        </StackPanel>
+
+        <ListBox Name="toDoList"
+                 HorizontalContentAlignment="Stretch"
+                 SelectionMode="Extended"
+                 SelectionChanged="toDoList_SelectionChanged"
+                 >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0 2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="100"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding Title}"/>
+                        <ProgressBar Grid.Column="1" 
+                                     Minimum="0"
+                                     Maximum="100"
+                                     Value="{Binding Completion}"
+                                     />
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </DockPanel>
+</Window>

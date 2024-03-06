@@ -17,7 +17,7 @@ CSharp_Practice
     ├── Fast_WPF  
     ├── WPF_MVVM_Tutorial  
     ├── WPF_Masterclass  
-    └──WPF_Tutorials_SN
+    └── WPF_Tutorials_SN
 ```
 
 

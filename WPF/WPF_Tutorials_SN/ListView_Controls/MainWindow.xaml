@@ -1,0 +1,34 @@
+﻿<Window x:Class="ListView_Controls.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListView_Controls"
+        mc:Ignorable="d"
+        Title="ListViewBasicSample" Height="450" Width="800">
+    <Grid>
+        <ListView Margin="10">
+            <ListViewItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/ListView_Controls;component/Resources/loopy0_6.png"
+                           Width="15" Height="15"/>
+                    <TextBlock Text="ListViewItem #1"/>
+                </StackPanel>
+            </ListViewItem>
+            <ListViewItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/ListView_Controls;component/Resources/loopy0_6.png"
+                           Width="15" Height="15"/>
+                    <TextBlock Text="ListViewItem #2"/>
+                </StackPanel>
+            </ListViewItem>
+            <ListViewItem IsSelected="True">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/ListView_Controls;component/Resources/loopy0_6.png"
+                           Width="15" Height="15"/>
+                    <TextBlock Text="ListViewItem #3"/>
+                </StackPanel>
+            </ListViewItem>
+        </ListView>
+    </Grid>
+</Window>

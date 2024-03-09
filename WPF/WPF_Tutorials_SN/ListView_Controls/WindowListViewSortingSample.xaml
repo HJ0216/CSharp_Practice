@@ -1,0 +1,35 @@
+﻿<Window x:Class="ListView_Controls.WindowListViewSortingSample"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListView_Controls"
+        mc:Ignorable="d"
+        Title="WindowListViewSortingSample" Height="200" Width="300">
+    <Grid Margin="10">
+        <ListView Name="listViewUserBs">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="120" 
+                                    DisplayMemberBinding="{Binding Name}" 
+                                    >
+                        <GridViewColumn.Header>
+                            <GridViewColumnHeader Tag="Name" Click="GridViewColumnHeader_Click" Content="Name"/>
+                            <!--The Tag property is used to hold the field name that will be used to sort by, if this particular column is clicked.-->
+                        </GridViewColumn.Header>
+                    </GridViewColumn>
+                    <GridViewColumn Width="50" 
+                                    DisplayMemberBinding="{Binding Age}" 
+                                    >
+                        <GridViewColumn.Header>
+                            <GridViewColumnHeader Tag="Age" Click="GridViewColumnHeader_Click" Content="Age"/>
+                        </GridViewColumn.Header>
+                    </GridViewColumn>
+                    <GridViewColumn Width="80" DisplayMemberBinding="{Binding Sex}">
+                        <GridViewColumnHeader Tag="Sex" Click="GridViewColumnHeader_Click" Content="Sex"/>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

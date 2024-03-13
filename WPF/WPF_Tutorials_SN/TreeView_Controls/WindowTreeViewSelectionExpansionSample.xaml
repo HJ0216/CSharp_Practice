@@ -1,0 +1,49 @@
+﻿<Window x:Class="TreeView_Controls.WindowTreeViewSelectionExpansionSample"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TreeView_Controls"
+        mc:Ignorable="d"
+        Title="WindowTreeViewSelectionExpansionSample" Height="200" Width="300">
+    <DockPanel Margin="10">
+        <WrapPanel Margin="0 10 0 0"
+                   DockPanel.Dock="Bottom"
+                   HorizontalAlignment="Center"
+                   >
+            <Button Name="buttonSelectNext"
+                    Click="buttonSelectNext_Click"
+                    Width="120"
+                    Content="Select Next"
+                    />
+            <Button Name="buttonToggleExpansion"
+                    Click="buttonToggleExpansion_Click"
+                    Width="120"
+                    Margin="10 0 0 0"
+                    Content="Toggle Expansion"
+                    />
+        </WrapPanel>
+
+        <TreeView Name="treeViewPersons">
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate ItemsSource="{Binding Children}">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/TreeView_Controls;component/Resources/loopy0_8.png" 
+                               Margin="0 5 0 0"
+                               Width="20" Height="20"
+                               />
+                        <TextBlock Text="{Binding Name}"
+                                   Margin="0 0 4 0"
+                                   />
+                    </StackPanel>
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+            <TreeView.ItemContainerStyle>
+                <Style TargetType="TreeViewItem">
+                    <Setter Property="IsSelected" Value="{Binding IsSelected}"/>
+                    <Setter Property="IsExpanded" Value="{Binding IsExpanded}"/>
+                </Style>
+            </TreeView.ItemContainerStyle>
+        </TreeView>
+    </DockPanel>
+</Window>

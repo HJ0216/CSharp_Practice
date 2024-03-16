@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "List_Controls", "List_Contr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListView_Controls", "ListView_Controls\ListView_Controls.csproj", "{E0B44998-F839-4D2D-9866-1D841CFE1151}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeView_Controls", "TreeView_Controls\TreeView_Controls.csproj", "{AB8E4F9A-1EFE-4DF1-AD2E-FD55AA2A205A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TreeView_Controls", "TreeView_Controls\TreeView_Controls.csproj", "{AB8E4F9A-1EFE-4DF1-AD2E-FD55AA2A205A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Styles_Control", "Styles_Control\Styles_Control.csproj", "{8CA5F1A8-71CD-4FB4-9F62-591E4CB94660}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{AB8E4F9A-1EFE-4DF1-AD2E-FD55AA2A205A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB8E4F9A-1EFE-4DF1-AD2E-FD55AA2A205A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB8E4F9A-1EFE-4DF1-AD2E-FD55AA2A205A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CA5F1A8-71CD-4FB4-9F62-591E4CB94660}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CA5F1A8-71CD-4FB4-9F62-591E4CB94660}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CA5F1A8-71CD-4FB4-9F62-591E4CB94660}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CA5F1A8-71CD-4FB4-9F62-591E4CB94660}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

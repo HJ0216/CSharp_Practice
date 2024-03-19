@@ -1,0 +1,46 @@
+﻿<Window x:Class="AudioAndVideo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AudioAndVideo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0"
+                    HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Margin" Value="5"/>
+                </Style>
+            </StackPanel.Resources>
+
+            <Button x:Name="buttonAsterisk" Click="buttonAsterisk_Click" Content="Asterisk"/>
+            <Button x:Name="buttonBeep" Click="buttonBeep_Click" Content="Beep"/>
+            <Button x:Name="buttonExclamation" Click="buttonExclamation_Click" Content="Exclamation"/>
+            <Button x:Name="buttonHand" Click="buttonHand_Click" Content="Hand"/>
+            <Button x:Name="buttonQuestion" Click="buttonQuestion_Click" Content="Question"/>
+
+            <Button x:Name="buttonOpenAudioFile" Click="buttonOpenAudioFile_Click" Content="Open Audio File"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <Label Name="labelStatus" Content="Not Playing..."
+                   HorizontalAlignment="Center" Margin="5"
+                   />
+            <WrapPanel HorizontalAlignment="Center">
+                <WrapPanel.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="Margin" Value="5"/>
+                    </Style>
+                </WrapPanel.Resources>
+                <Button x:Name="buttonPlay" Click="buttonPlay_Click" Content="Play"/>
+                <Button x:Name="buttonPause" Click="buttonPause_Click" Content="Pause"/>
+                <Button x:Name="buttonStop" Click="buttonStop_Click" Content="Stop"/>
+            </WrapPanel>
+        </StackPanel>
+    </Grid>
+</Window>

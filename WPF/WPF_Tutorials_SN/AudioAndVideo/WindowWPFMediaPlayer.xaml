@@ -1,0 +1,63 @@
+﻿<Window x:Class="AudioAndVideo.WindowWPFMediaPlayer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AudioAndVideo"
+        mc:Ignorable="d"
+        Title="WindowWPFMediaPlayer" Height="450" Width="800">
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Open" CanExecute="Open_CanExecute" Executed="Open_Executed"/>
+        <CommandBinding Command="MediaCommands.Play" CanExecute="Play_CanExecute" Executed="Play_Executed" />
+        <CommandBinding Command="MediaCommands.Pause" CanExecute="Pause_CanExecute" Executed="Pause_Executed" />
+        <CommandBinding Command="MediaCommands.Stop" CanExecute="Stop_CanExecute" Executed="Stop_Executed" />
+    </Window.CommandBindings>
+    <Grid MouseWheel="Grid_MouseWheel">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <ToolBar Grid.Row="0">
+            <Button Command="ApplicationCommands.Open" Content="Open"/>
+            <Separator/>
+            <Button Command="MediaCommands.Play" Content="Play"/>
+            <Button Command="MediaCommands.Pause" Content="Pause"/>
+            <Button Command="MediaCommands.Stop" Content="Stop"/>
+        </ToolBar>
+
+        <MediaElement Grid.Row="1" Name="mediaElementPlayer" LoadedBehavior="Manual" Stretch="None"/>
+
+        <StatusBar Grid.Row="2">
+            <StatusBar.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </ItemsPanelTemplate>
+            </StatusBar.ItemsPanel>
+
+            <StatusBarItem Grid.Column="0">
+                <TextBlock x:Name="labelProgressStatus" Text="00:00:00"/>
+            </StatusBarItem>
+
+            <StatusBarItem Grid.Column="1" HorizontalContentAlignment="Stretch">
+                <Slider x:Name="sliderProgress" 
+                        Thumb.DragStarted="sliderProgress_DragStarted"
+                        Thumb.DragCompleted="sliderProgress_DragCompleted"
+                        ValueChanged="sliderProgress_ValueChanged"
+                        />
+            </StatusBarItem>
+
+            <StatusBarItem Grid.Column="2">
+                <ProgressBar Name="progressBarVolume" Width="50" Height="12"
+                             Maximum="1" Value="{Binding ElementName=mediaElementPlayer, Path=Volume}"/>
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>

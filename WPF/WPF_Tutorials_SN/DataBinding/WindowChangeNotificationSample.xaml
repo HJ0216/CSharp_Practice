@@ -1,0 +1,22 @@
+﻿<Window x:Class="DataBinding.WindowChangeNotificationSample"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataBinding"
+        mc:Ignorable="d"
+        Title="WindowChangeNotificationSample" Height="150" Width="300">
+    <DockPanel Margin="10">
+        <StackPanel DockPanel.Dock="Right" Margin="10 0 0 0">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Margin" Value="0 5"/>
+                </Style>
+            </StackPanel.Resources>
+            <Button x:Name="buttonAddUser" Click="buttonAddUser_Click" Content="Add User"/>
+            <Button x:Name="buttonChangeUser" Click="buttonChangeUser_Click" Content="Change User"/>
+            <Button x:Name="buttonDeleteUser" Click="buttonDeleteUser_Click" Content="Delete User"/>
+        </StackPanel>
+        <ListBox Name="labelUsers" DisplayMemberPath="Name"/>
+    </DockPanel>
+</Window>

@@ -112,6 +112,63 @@
                                     ImageSource="/Resources/loopy_zip.jpg"
                                     />
                     </Border.Background>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <!--Title-->
+                        <StackPanel VerticalAlignment="Center"
+                                    Margin="60 0 0 0"
+                                    >
+                            <TextBlock Text="Loopy"
+                                       Foreground="#000000"
+                                       FontSize="22"
+                                       />
+                            <TextBlock Text="Zanmang Loopy"
+                                       Foreground="#000000"
+                                       Margin="0 10"
+                                       FontSize="36"
+                                       FontWeight="Bold"
+                                       TextWrapping="Wrap"
+                                       />
+                            <TextBlock Foreground="#000000"
+                                       FontSize="32">
+                                <Run Text="Cute  "/>
+                                <Run Text="Lovely"
+                                     FontWeight="Thin"
+                                     FontSize="26"/>
+                            </TextBlock>
+                            <TextBlock Text="&amp;"
+                                       Foreground="#000000"
+                                       FontSize="30"
+                                       FontWeight="Thin"
+                                       Margin="65 -20 0 0"
+                                       />
+                        </StackPanel>
+                        
+                        <!--Panels-->
+                        <StackPanel Grid.Column="1"
+                                    VerticalAlignment="Center"
+                                    Margin="0 0 50 0"
+                                    >
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                
+                                <!--Cards-->
+                                
+                            </Grid>
+                        </StackPanel>
+                    </Grid>
                 </Border>
             </Border>
             

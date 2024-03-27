@@ -53,4 +53,63 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <Style x:Key="toggleButton" TargetType="{x:Type ToggleButton}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Grid>
+                        <Border Name="border"
+                                Background="#3256F1"
+                                CornerRadius="13"
+                                Width="50" Height="26"
+                                VerticalAlignment="Center" HorizontalAlignment="Center"
+                                />
+                        <Ellipse Name="ellipse"
+                                 Fill="#FBFBFB"
+                                 Width="24" Height="24"
+                                 Margin="25 0 0 0"
+                                 HorizontalAlignment="Center" VerticalAlignment="Center"
+                                 />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="border"
+                                                        Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                        To="#001C91"
+                                                        Duration="0:0:0:0.2"
+                                                        />
+                                        <ThicknessAnimation Storyboard.TargetName="ellipse"
+                                                            Storyboard.TargetProperty="Margin"
+                                                            To="1 0 0 0"
+                                                            Duration="0:0:0:0.2"
+                                                            />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="border"
+                                                        Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                        To="#3256F1"
+                                                        Duration="0:0:0:0.2"
+                                                        />
+                                        <ThicknessAnimation Storyboard.TargetName="ellipse"
+                                                            Storyboard.TargetProperty="Margin"
+                                                            To="25 0 0 0"
+                                                            Duration="0:0:0:0.2"
+                                                            />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

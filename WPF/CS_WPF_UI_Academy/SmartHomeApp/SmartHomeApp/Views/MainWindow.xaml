@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SmartHomeApp"
         xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:uc="clr-namespace:SmartHomeApp.Views.UserControls"
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="1080"
         WindowStartupLocation="CenterScreen"
@@ -165,7 +166,36 @@
                                 </Grid.RowDefinitions>
                                 
                                 <!--Cards-->
-                                
+                                <uc:UserControlCard Grid.Row="0" Grid.Column="0"
+                                                    Margin="0 0 8 8"
+                                                    />
+                                <uc:UserControlCard Grid.Row="0" Grid.Column="1"
+                                                    Margin="8 0 0 8"
+                                                    />
+                                <uc:UserControlCard Grid.Row="1" Grid.Column="0"
+                                                    Margin="0 8 8 0"
+                                                    />
+                                <uc:UserControlCard Grid.Row="1" Grid.Column="1"
+                                                    Margin="8 8 0 0"
+                                                    />
+
+                                <!--<ContentControl Grid.Row="0" Grid.Column="0"
+                                                Content="{Binding CardsControl}"
+                                                Margin="0 0 8 8"
+                                                />
+                                <ContentControl Grid.Row="0" Grid.Column="1"
+                                                Content="{Binding CardsControl}"
+                                                Margin="8 0 0 8"
+                                                />
+                                <ContentControl Grid.Row="1" Grid.Column="0"
+                                                Content="{Binding CardsControl}"
+                                                Margin="0 8 8 0"
+                                                />
+                                <ContentControl Grid.Row="1" Grid.Column="1"
+                                                Content="{Binding CardsControl}"
+                                                Margin="8 8 0 0"
+                                                />-->
+
                             </Grid>
                         </StackPanel>
                     </Grid>

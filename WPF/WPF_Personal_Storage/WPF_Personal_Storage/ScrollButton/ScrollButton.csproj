@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\loopy2_10.png" />
+    <None Remove="Resources\loopy2_11.png" />
+    <None Remove="Resources\loopy2_12.png" />
+    <None Remove="Resources\loopy2_13.png" />
+    <None Remove="Resources\loopy2_14.png" />
+    <None Remove="Resources\loopy2_9.png" />
+    <None Remove="Resources\number0.png" />
+    <None Remove="Resources\number1.png" />
+    <None Remove="Resources\number2.png" />
+    <None Remove="Resources\number3.png" />
+    <None Remove="Resources\number4.png" />
+    <None Remove="Resources\number5.png" />
+    <None Remove="Resources\number6.png" />
+    <None Remove="Resources\number7.png" />
+    <None Remove="Resources\number8.png" />
+    <None Remove="Resources\number9.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.77" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\loopy2_10.png" />
+    <Resource Include="Resources\loopy2_11.png" />
+    <Resource Include="Resources\loopy2_12.png" />
+    <Resource Include="Resources\loopy2_13.png" />
+    <Resource Include="Resources\loopy2_14.png" />
+    <Resource Include="Resources\loopy2_9.png" />
+    <Resource Include="Resources\number0.png" />
+    <Resource Include="Resources\number1.png" />
+    <Resource Include="Resources\number2.png" />
+    <Resource Include="Resources\number3.png" />
+    <Resource Include="Resources\number4.png" />
+    <Resource Include="Resources\number5.png" />
+    <Resource Include="Resources\number6.png" />
+    <Resource Include="Resources\number7.png" />
+    <Resource Include="Resources\number8.png" />
+    <Resource Include="Resources\number9.png" />
+  </ItemGroup>
+
+</Project>

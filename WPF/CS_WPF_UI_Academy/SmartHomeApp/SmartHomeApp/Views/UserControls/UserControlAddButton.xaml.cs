@@ -1,5 +1,4 @@
-﻿using SmartHomeApp.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,11 +16,11 @@ using System.Windows.Shapes;
 namespace SmartHomeApp.Views.UserControls
 {
     /// <summary>
-    /// Interaction logic for UserControlCard.xaml
+    /// Interaction logic for UserControlAddButton.xaml
     /// </summary>
-    public partial class UserControlCard : UserControl
+    public partial class UserControlAddButton : UserControl
     {
-        public UserControlCard()
+        public UserControlAddButton()
         {
             InitializeComponent();
         }

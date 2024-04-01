@@ -1,15 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace SmartHomeApp.ViewModels
 {
-    public class ViewModelCard
+    public class ViewModelCard : INotifyPropertyChanged
     {
-		private string _title = string.Empty;
+        #region INotifyPropertyChanged
+        public event PropertyChangedEventHandler? PropertyChanged;
+        protected void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+        #endregion
+
+        #region Properties
+        private string _title = string.Empty;
 
 		public string Title
 		{
@@ -48,6 +63,24 @@ namespace SmartHomeApp.ViewModels
             get { return _imageOff; }
             set { _imageOff = value; }
         }
+
+        #endregion
+
+
+
+        #region Commands
+
+        #endregion
+
+
+        #region Constructors
+        public ViewModelCard(string title, ImageSource imageOn, ImageSource imageOff)
+        {
+            Title = title;
+            ImageOn = imageOn;
+            ImageOff = imageOff;
+        }
+        #endregion
 
     }
 }

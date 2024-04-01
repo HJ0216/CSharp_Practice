@@ -82,6 +82,7 @@
                         <Setter Property="VerticalAlignment" Value="Top"/>
                         <Style.Triggers>
                             <DataTrigger Binding="{Binding ElementName=card, Path=IsHorizontal}"
+                                         
                                          Value="True"
                                          >
                                 <Setter Property="VerticalAlignment" Value="Center"/>
@@ -95,10 +96,11 @@
                     </Style>
                 </CheckBox.Style>
             </CheckBox>
-            
+
             <Image VerticalAlignment="Center"
                    Width="40" Height="40"
                    HorizontalAlignment="Left"
+                   Name="cardImage"
                    >
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
@@ -106,19 +108,20 @@
                             <DataTrigger Binding="{Binding ElementName=toggle, Path=IsChecked}"
                                          Value="True"
                                          >
-                                <Setter Property="Source" Value="{Binding ElementName=card, Path=ImageOn}"/>
+                                <Setter Property="Source" Value="{Binding Path=ImageOn}"/>
                             </DataTrigger>
                             <DataTrigger Binding="{Binding ElementName=toggle, Path=IsChecked}"
                                          Value="False"
                                          >
-                                <Setter Property="Source" Value="{Binding ElementName=card, Path=ImageOff}"/>
+                                <Setter Property="Source" Value="{Binding Path=ImageOff}"/>
                             </DataTrigger>
                         </Style.Triggers>
                     </Style>
                 </Image.Style>
             </Image>
-            
-            <TextBlock VerticalAlignment="Bottom"
+
+            <TextBlock Text="{Binding Title}" 
+                       VerticalAlignment="Bottom"
                        FontWeight="SemiBold"
                        >
                 <TextBlock.Style>

@@ -56,6 +56,36 @@
                         <Button Style="{StaticResource menuButton}"
                                 Background="#FFFFFF"
                                 Margin="15 40 15 20">
+
+                            <Button.Triggers>
+                                <EventTrigger RoutedEvent="Button.Click">
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetName="page1"
+                                                             Storyboard.TargetProperty="(Border.RenderTransform).(TranslateTransform.Y)"
+                                                             To="0"
+                                                             Duration="0:0:0.5"
+                                                             />
+                                            <DoubleAnimation Storyboard.TargetName="page2"
+                                                             Storyboard.TargetProperty="(Border.RenderTransform).(TranslateTransform.Y)"
+                                                             To="{Binding ElementName=window, Path=ActualHeight}"
+                                                             Duration="0:0:0.3"
+                                                             />
+                                            <DoubleAnimation Storyboard.TargetName="page1"
+                                                             Storyboard.TargetProperty="Opacity"
+                                                             To="1.0"
+                                                             Duration="0:0:0.5"
+                                                             />
+                                            <DoubleAnimation Storyboard.TargetName="page2"
+                                                             Storyboard.TargetProperty="Opacity"
+                                                             To="0.0"
+                                                             Duration="0:0:0.5"
+                                                             />
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+                            </Button.Triggers>
+                            
                             <Image Source="/Resources/loopy2_1.png"
                                    Width="20"/>
                         </Button>
@@ -166,42 +196,132 @@
                                 </Grid.RowDefinitions>
                                 
                                 <!--Cards-->
-                                <uc:UserControlCard Grid.Row="0" Grid.Column="0"
-                                                    Margin="0 0 8 8"
-                                                    />
-                                <uc:UserControlCard Grid.Row="0" Grid.Column="1"
-                                                    Margin="8 0 0 8"
-                                                    />
-                                <uc:UserControlCard Grid.Row="1" Grid.Column="0"
-                                                    Margin="0 8 8 0"
-                                                    />
-                                <uc:UserControlCard Grid.Row="1" Grid.Column="1"
-                                                    Margin="8 8 0 0"
-                                                    />
-
-                                <!--<ContentControl Grid.Row="0" Grid.Column="0"
-                                                Content="{Binding CardsControl}"
+                                <ContentControl Content="{Binding UserControlCard1}"
+                                                Grid.Row="0" Grid.Column="0"
                                                 Margin="0 0 8 8"
                                                 />
-                                <ContentControl Grid.Row="0" Grid.Column="1"
-                                                Content="{Binding CardsControl}"
+                                <ContentControl Content="{Binding UserControlCard2}"
+                                                Grid.Row="0" Grid.Column="1"
                                                 Margin="8 0 0 8"
                                                 />
-                                <ContentControl Grid.Row="1" Grid.Column="0"
-                                                Content="{Binding CardsControl}"
+                                <ContentControl Content="{Binding UserControlCard3}"
+                                                Grid.Row="1" Grid.Column="0"
                                                 Margin="0 8 8 0"
                                                 />
-                                <ContentControl Grid.Row="1" Grid.Column="1"
-                                                Content="{Binding CardsControl}"
+                                <ContentControl Content="{Binding UserControlCard4}"
+                                                Grid.Row="1" Grid.Column="1"
                                                 Margin="8 8 0 0"
-                                                />-->
+                                                />
+                            </Grid>
+                            
+                            <!--Add Buttons-->
+                            <ContentControl Grid.Column="1" 
+                                            Content="{Binding UserControlAddButton}"
+                                            Margin="0 50 0 0"
+                                            HorizontalAlignment="Center"
+                                            />
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </Border>
 
+            <!--page 2-->
+            <Border Name="page2"
+                    Grid.Column="1"
+                    Style="{StaticResource borderPage}"
+                    >
+                <Border.RenderTransform>
+                    <TranslateTransform Y="{Binding ElementName=window, Path=ActualHeight}"/>
+                </Border.RenderTransform>
+
+                <Border CornerRadius="25">
+                    <Border.Background>
+                        <ImageBrush Stretch="Fill"
+                                    Opacity="0.6"
+                                    ImageSource="/Resources/loopy_zip.jpg"
+                                    />
+                    </Border.Background>
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+
+                        <!--Add Buttons-->
+                        <ContentControl Content="{Binding UserControlAddButton}"
+                                        Margin="0 40 40 0"
+                                        HorizontalAlignment="Center"
+                                        />
+
+                        <!--Title-->
+                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"
+                                    Margin="0 40 0 0"
+                                    >
+                            <TextBlock Foreground="#000000"
+                                       FontSize="32"
+                                       TextAlignment="Center"
+                                       >
+                                <Run Text="Cute  "/>
+                                <Run Text="Lovely"
+                                     FontWeight="Thin"
+                                     FontSize="26"/>
+                            </TextBlock>
+                            <TextBlock Text="&amp;"
+                                       Foreground="#000000"
+                                       FontSize="30"
+                                       FontWeight="Thin"
+                                       Margin="0 -20 0 0"
+                                       TextAlignment="Center"
+                                       />
+                            <TextBlock Text="Loopy"
+                                       Foreground="#000000"
+                                       FontSize="22"
+                                       />
+                            <TextBlock Text="Zanmang Loopy"
+                                       Foreground="#000000"
+                                       Margin="0 10"
+                                       FontSize="36"
+                                       FontWeight="Bold"
+                                       TextWrapping="Wrap"
+                                       />
+                        </StackPanel>
+
+                        <!--Panels-->
+                        <StackPanel Grid.Row="1"
+                                    VerticalAlignment="Center"
+                                    Margin="0 0 0 30"
+                                    >
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <!--Cards-->
+                                <ContentControl Content="{Binding UserControlCard1}"
+                                                Grid.Column="0"
+                                                Margin="12 0 12 0"
+                                                />
+                                <ContentControl Content="{Binding UserControlCard2}"
+                                                Grid.Column="1"
+                                                Margin="12 0 12 0"
+                                                />
+                                <ContentControl Content="{Binding UserControlCard3}"
+                                                Grid.Column="2"
+                                                Margin="12 0 12 0"
+                                                />
+                                <ContentControl Content="{Binding UserControlCard4}"
+                                                Grid.Column="3"
+                                                Margin="12 0 12 0"
+                                                />
                             </Grid>
                         </StackPanel>
                     </Grid>
                 </Border>
             </Border>
-            
         </Grid>
     </Border>
 </Window>

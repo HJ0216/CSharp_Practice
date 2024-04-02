@@ -37,10 +37,10 @@
                         <Setter Property="Background" Value="#EFEFEE"/>
                     </DataTrigger>
 
-                    <DataTrigger Binding="{Binding ElementName=card, Path=IsHorizontal}" Value="True">
+                    <DataTrigger Binding="{Binding IsHorizontal}" Value="True">
                         <Setter Property="Width" Value="190"/>
                     </DataTrigger>
-                    <DataTrigger Binding="{Binding ElementName=card, Path=IsHorizontal}" Value="False">
+                    <DataTrigger Binding="{Binding IsHorizontal}" Value="False">
                         <Setter Property="Width" Value="150"/>
                     </DataTrigger>
                 </Style.Triggers>
@@ -81,13 +81,12 @@
                     <Style TargetType="{x:Type CheckBox}" BasedOn="{StaticResource toggleButton}">
                         <Setter Property="VerticalAlignment" Value="Top"/>
                         <Style.Triggers>
-                            <DataTrigger Binding="{Binding ElementName=card, Path=IsHorizontal}"
-                                         
+                            <DataTrigger Binding="{Binding IsHorizontal}"
                                          Value="True"
                                          >
                                 <Setter Property="VerticalAlignment" Value="Center"/>
                             </DataTrigger>
-                            <DataTrigger Binding="{Binding ElementName=card, Path=IsHorizontal}"
+                            <DataTrigger Binding="{Binding IsHorizontal}"
                                          Value="False"
                                          >
                                 <Setter Property="VerticalAlignment" Value="Top"/>

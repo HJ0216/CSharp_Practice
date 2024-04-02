@@ -74,11 +74,12 @@ namespace SmartHomeApp.ViewModels
 
 
         #region Constructors
-        public ViewModelCard(string title, ImageSource imageOn, ImageSource imageOff)
+        public ViewModelCard(string title, ImageSource imageOn, ImageSource imageOff, bool isHorizontal)
         {
             Title = title;
             ImageOn = imageOn;
             ImageOff = imageOff;
+            IsHorizontal = isHorizontal;
         }
         #endregion
 

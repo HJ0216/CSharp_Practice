@@ -21,16 +21,20 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="MouseDoubleClick">
+            <i:InvokeCommandAction Command="{Binding ToggleWindowStateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+
     <Border Background="#FFFFFF"
             Padding="30"
             CornerRadius="25"
             >
         <i:Interaction.Triggers>
-            <i:EventTrigger EventName="MouseEnter">
-                <i:InvokeCommandAction Command="{Binding MouseEnterCommand}" CommandParameter="{Binding ElementName=window}"/>
-            </i:EventTrigger>
             <i:EventTrigger EventName="MouseLeftButtonDown">
-                <i:InvokeCommandAction Command="{Binding MouseLeftButtonDownCommand}"/>
+                <i:InvokeCommandAction Command="{Binding MouseLeftButtonDownCommand}" CommandParameter="{Binding ElementName=window}"/>
             </i:EventTrigger>
         </i:Interaction.Triggers>
 

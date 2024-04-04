@@ -3,6 +3,7 @@ using SmartHomeApp.Views.UserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.Common;
 using System.Linq;
 using System.Reflection.Metadata;
 using System.Runtime.CompilerServices;
@@ -104,7 +105,7 @@ namespace SmartHomeApp.ViewModels
         #endregion
 
         #region Commands
-        public ICommand MouseEnterCommand { get; private set; }
+        public ICommand ToggleWindowStateCommand { get; private set; }
         public ICommand MouseLeftButtonDownCommand { get; private set; }
 
         #endregion
@@ -159,20 +160,41 @@ namespace SmartHomeApp.ViewModels
             UserControlAddButton = new UserControlAddButton();
             UserControlAddButton.DataContext = new ViewModelAddButton("Add New Room");
 
-            MouseEnterCommand = new RelayCommand(MouseEnterEvent);
+            ToggleWindowStateCommand = new RelayCommand(ToggleWindowStateEvent);
             MouseLeftButtonDownCommand = new RelayCommand(MouseLeftButtonDownEvent);
 
         }
         #endregion
 
         #region Methods
-        private void MouseEnterEvent(object obj)
+        private void ToggleWindowStateEvent(object obj)
         {
+            var window = obj as Window;
 
+            if(window == null)
+            {
+                return;
+            }
+
+            if (window.WindowState == WindowState.Maximized)
+            {
+                window.WindowState = WindowState.Normal;
+                return;
+            }
+
+            if (window.WindowState == WindowState.Normal)
+            {
+                window.WindowState = WindowState.Maximized;
+            }
         }
 
         private void MouseLeftButtonDownEvent(object obj)
         {
+            var window = obj as Window;
+            if (window != null)
+            {
+                window.DragMove();
+            }
         }
         #endregion
     }

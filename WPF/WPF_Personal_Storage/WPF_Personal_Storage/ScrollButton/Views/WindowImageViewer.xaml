@@ -1,0 +1,31 @@
+﻿<Window x:Class="ScrollButton.Views.WindowImageViewer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ScrollButton.Views"
+        mc:Ignorable="d"
+        Title="WindowImageViewer"
+        WindowStyle="None" ResizeMode="NoResize" 
+        AllowsTransparency="True" Background="Transparent"
+        Name="window" WindowStartupLocation="CenterOwner"
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button Height="30"
+                VerticalAlignment="Center" HorizontalAlignment="Right"
+                BorderThickness="0"
+                Background="#00FFFFFF"
+                Command="{Binding CloseWindowCommand}" CommandParameter="{Binding ElementName=window}"
+                >
+            <Image Source="pack://application:,,,/Resources/IconClose.png"
+                   RenderOptions.BitmapScalingMode="HighQuality"
+                   />
+        </Button>
+        <Image Grid.Row="1" 
+               Source="{Binding SelectedImageSource}"/>
+    </Grid>
+</Window>

@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Reflection.Metadata;
 using System.ComponentModel;
+using ScrollButton.Views;
 
 namespace ScrollButton.ViewModels
 {
@@ -61,6 +62,7 @@ namespace ScrollButton.ViewModels
 
         #region Commands
         public RelayCommand ScrollImageCommand => null ?? new RelayCommand(ScrollImageEvent);
+        public RelayCommand EnlargeImageCommand => null ?? new RelayCommand(EnlargeImageEvent);
 
         #endregion
 
@@ -127,6 +129,19 @@ namespace ScrollButton.ViewModels
 
             return null;
         }
+
+        private void EnlargeImageEvent(object obj)
+        {
+            Window window = obj as Window;
+
+            WindowImageViewer windowImageViewer = new WindowImageViewer();
+            windowImageViewer.DataContext = new ViewModelImageViewer(SelectedImageSource);
+            windowImageViewer.Width = 300;
+            windowImageViewer.Height = 330;
+            windowImageViewer.Owner = window;
+            windowImageViewer.ShowDialog();
+        }
+
 
         #endregion
     }

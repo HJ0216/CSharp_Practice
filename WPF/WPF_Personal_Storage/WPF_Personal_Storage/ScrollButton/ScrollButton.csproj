@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\IconClose.png" />
     <None Remove="Resources\loopy2_10.png" />
     <None Remove="Resources\loopy2_11.png" />
     <None Remove="Resources\loopy2_12.png" />
@@ -32,12 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Resources\loopy2_10.png" />
-    <Resource Include="Resources\loopy2_11.png" />
-    <Resource Include="Resources\loopy2_12.png" />
-    <Resource Include="Resources\loopy2_13.png" />
-    <Resource Include="Resources\loopy2_14.png" />
-    <Resource Include="Resources\loopy2_9.png" />
+    <Resource Include="Resources\IconClose.png" />
     <Resource Include="Resources\number0.png" />
     <Resource Include="Resources\number1.png" />
     <Resource Include="Resources\number2.png" />

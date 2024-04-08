@@ -16,6 +16,8 @@ CSharp_Practice
     ├── CS_Design_Pro  
     ├── CS_WPF_UI_Academy  
     ├── Fast_WPF  
+    ├── ToskersCorner  
+    ├── VectoArt  
     ├── WPF_MVVM_Tutorial  
     ├── WPF_Masterclass  
     ├── WPF_Personal_Storage  
@@ -38,6 +40,8 @@ CSharp_Practice
 * [CS_Design_Pro](https://www.youtube.com/@CSharpDesignPro/videos)
 * [CS_WPF_UI_Academy](https://www.youtube.com/@WpfUI)
 * [Fast_WPF](https://www.udemy.com/course/fast-wpf-in-c-windows-presentation-foundation-for-beginners/?couponCode=ST22FS22724)
+* [ToskersCorner](https://www.youtube.com/@ToskersCorner)
+* [VectoArt](https://www.youtube.com/@VectoArt)
 * [WPF_MVVM_Tutorial](https://www.youtube.com/playlist?list=PLA8ZIAm2I03hS41Fy4vFpRw8AdYNBXmNm)
 * [WPF_Masterclass](https://www.udemy.com/course/windows-presentation-foundation-masterclass/?couponCode=ST22FS22724)
 * [WPF_Tutorials_SN](https://wpf-tutorial.com/)

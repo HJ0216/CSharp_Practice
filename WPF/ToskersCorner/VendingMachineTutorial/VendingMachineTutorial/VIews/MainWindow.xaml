@@ -1,0 +1,169 @@
+﻿<Window x:Class="VendingMachineTutorial.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VendingMachineTutorial"
+        mc:Ignorable="d"
+        Title="Vending Machine" 
+        Height="600" Width="500"
+        >
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/DictionaryStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid Background="#caf0f8">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.ColumnSpan="5"
+                    Background="#03045e"
+                    >
+            <TextBlock Text="Vending Machine"
+                       Style="{StaticResource titleBlock}"
+                       Foreground="#FFFFFF"
+                       />
+        </StackPanel>
+
+        <ListView Grid.Row="1"
+                  Grid.ColumnSpan="3" Grid.RowSpan="4"
+                  Style="{StaticResource vendingListView}"
+                  Background="#0077b6"
+                  ItemsSource="{Binding VmProducts}"
+                  >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <DockPanel>
+                        <Button DockPanel.Dock="Left" 
+                                Content="Purchase"
+                                Style="{StaticResource vendingButton}"
+                                Command="{Binding DataContext.PurchaseCommand, RelativeSource={RelativeSource AncestorType={x:Type ListView}}}"
+                                CommandParameter="{Binding}"
+                                />
+                        <StackPanel DockPanel.Dock="Right">
+                            <TextBlock Style="{StaticResource customerBlock}" Text="{Binding Information.Name}"/>
+                            <TextBlock Style="{StaticResource customerBlock}" 
+                                       Text="{Binding Information.Price, StringFormat=${0:0.00}}"
+                                       />
+                            <TextBlock Text="Out of Stock" Foreground="#FF0000"
+                                       Visibility="{Binding OutOfStockMessage}"
+                                       />
+                        </StackPanel>
+                    </DockPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Grid.Row="5" Grid.Column="0"
+                Content="$0.25"
+                Style="{StaticResource moneyButton}"
+                Command="{Binding InsertCoinCommand}"
+                CommandParameter="0.25"
+                />
+        <Button Grid.Row="5" Grid.Column="1"
+                Content="$0.50"
+                Style="{StaticResource moneyButton}"
+                Command="{Binding InsertCoinCommand}"
+                CommandParameter="0.50"
+                />
+        <Button Grid.Row="5" Grid.Column="2"
+                Content="$0.75"
+                Style="{StaticResource moneyButton}"
+                Command="{Binding InsertCoinCommand}"
+                CommandParameter="0.75"
+                />
+
+        <StackPanel Grid.Row="6"
+                    Grid.ColumnSpan="3"
+                    >
+            <TextBlock Text="{Binding VmPayment.Inserted, StringFormat=Inserted ${0:0.00}}"
+                       Style="{StaticResource customerBlock}"
+                       />
+            <TextBlock Text="{Binding VmPayment.Change, StringFormat=Change ${0:0.00}}"
+                       Style="{StaticResource customerBlock}"
+                       />
+        </StackPanel>
+
+        <DockPanel Grid.Row="1" Grid.Column="3" 
+                   Grid.RowSpan="3" Grid.ColumnSpan="2"
+                   Margin="5"
+                   Background="#00b4d8"
+                   >
+            <TextBlock DockPanel.Dock="Top"
+                       FontSize="28"
+                       Style="{StaticResource customerBlock}"
+                       HorizontalAlignment="Center"
+                       Text="Inventory"
+                       />
+            <StackPanel DockPanel.Dock="Bottom">
+                <TextBlock Style="{StaticResource customerBlock}"
+                           Margin="5"
+                           FontSize="16"
+                           Text="{Binding VmProducts[0].InventoryDisplay}"
+                           />
+                <TextBlock Style="{StaticResource customerBlock}"
+                           Margin="5"
+                           FontSize="16"
+                           Text="{Binding VmProducts[1].InventoryDisplay}"
+                           />
+                <TextBlock Style="{StaticResource customerBlock}"
+                           Margin="5"
+                           FontSize="16"
+                           Text="{Binding VmProducts[2].InventoryDisplay}"
+                           />
+                <TextBlock Style="{StaticResource customerBlock}"
+                           Margin="5"
+                           FontSize="16"
+                           Text="{Binding VmProducts[3].InventoryDisplay}"
+                           />
+            </StackPanel>
+        </DockPanel>
+
+        <DockPanel Grid.Row="4" Grid.Column="3" 
+                   Grid.RowSpan="3" Grid.ColumnSpan="2"
+                   Margin="5"
+                   Background="#90e0ef"
+                   >
+            <TextBlock DockPanel.Dock="Top"
+                       FontSize="28"
+                       Style="{StaticResource customerBlock}"
+                       HorizontalAlignment="Center"
+                       Text="Manager"
+                       />
+            <StackPanel DockPanel.Dock="Bottom">
+                <Button Style="{StaticResource managerButton}"
+                        FontSize="16"
+                        Content="Refill Supply"
+                        Command="{Binding RefillCommand}"
+                        />
+                <Button Style="{StaticResource managerButton}"
+                        FontSize="16"
+                        Content="Empty Supply"
+                        Command="{Binding EmptyCommand}"
+                        />
+                <Button Style="{StaticResource managerButton}"
+                        FontSize="16"
+                        Content="Withdraw Supply"
+                        Command="{Binding WithdrawCommand}"
+                        />
+            </StackPanel>
+        </DockPanel>
+
+    </Grid>
+</Window>

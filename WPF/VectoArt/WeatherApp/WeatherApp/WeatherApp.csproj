@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\IconLocation.png" />
+    <None Remove="Resources\IconWeatherCloudy.png" />
+    <None Remove="Resources\IconWeatherNight.png" />
+    <None Remove="Resources\IconWeatherRainy.png" />
+    <None Remove="Resources\IconWeatherSnowy.png" />
+    <None Remove="Resources\IconWeatherSunny.png" />
+    <None Remove="Resources\loopy2_7.png" />
+    <None Remove="Resources\loopy2_9.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\IconLocation.png" />
+    <Resource Include="Resources\IconWeatherCloudy.png" />
+    <Resource Include="Resources\IconWeatherNight.png" />
+    <Resource Include="Resources\IconWeatherRainy.png" />
+    <Resource Include="Resources\IconWeatherSnowy.png" />
+    <Resource Include="Resources\IconWeatherSunny.png" />
+    <Resource Include="Resources\loopy2_7.png" />
+    <Resource Include="Resources\loopy2_9.png" />
+  </ItemGroup>
+
+</Project>

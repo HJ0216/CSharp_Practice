@@ -1,0 +1,48 @@
+﻿<Window x:Class="Notepad.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Notepad"
+        mc:Ignorable="d"
+        Title="WPF Notepad" 
+        Height="400" Width="525"
+        >
+    <DockPanel Margin="1">
+        <Menu DockPanel.Dock="Top">
+            <Menu.Items>
+                <MenuItem Header="File" DataContext="{Binding VmFile}">
+                    <MenuItem Header="New" Command="{Binding NewFileCommand}"/>
+                    <MenuItem Header="Open" Command="{Binding OpenFileCommand}"/>
+                    <MenuItem Header="Save" Command="{Binding SaveFileCommand}"/>
+                    <MenuItem Header="Save as ..." Command="{Binding SaveFileAsCommand}"/>
+                </MenuItem>
+                <MenuItem Header="Format" DataContext="{Binding VmEditor}">
+                    <MenuItem Header="Format" Command="{Binding FormatCommand}"/>
+                    <MenuItem Header="Word Wrap" Command="{Binding WrapCommand}"/>
+                </MenuItem>
+                <MenuItem Header="Help" DataContext="{Binding VmHelp}">
+                    <MenuItem Header="About" Command="{Binding HelpCommand}"/>
+                </MenuItem>
+            </Menu.Items>
+        </Menu>
+
+        <DockPanel>
+            <TextBlock DockPanel.Dock="Bottom"
+                       DataContext="{Binding VmFile}"
+                       Text="{Binding DocumentModel.FilePath}"
+                       />
+            <TextBox DockPanel.Dock="top"
+                     VerticalScrollBarVisibility="Visible"
+                     DataContext="{Binding VmEditor}"
+                     FontStyle="{Binding FormatModel.FontStyle}"
+                     FontWeight="{Binding FormatModel.FontWeight}"
+                     FontFamily="{Binding FormatModel.FontFamily}"
+                     TextWrapping="{Binding FormatModel.TextWrapping}"
+                     FontSize="{Binding FormatModel.FontSize}"
+                     AcceptsReturn="True" AcceptsTab="True"
+                     Text="{Binding DocumentModel.Text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                     />
+        </DockPanel>
+    </DockPanel>
+</Window>

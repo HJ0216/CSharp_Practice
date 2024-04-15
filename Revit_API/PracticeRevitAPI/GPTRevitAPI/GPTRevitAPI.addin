@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+	<AddIn Type="Command">
+		<Name>Command GPTRevitAPI</Name>
+		<Descrition>Some description for Command GPTRevitAPI</Descrition>
+		<Assembly>GPTRevitAPI.dll</Assembly>
+		<FullClassName>GPTRevitAPI.Helpers.Command</FullClassName>
+		<ClientId>37EAA52F-A956-4BC0-9A99-A9B469B2B796</ClientId>
+		<VendorId>ADSK</VendorId>
+		<VendorDescription>Autodesk, www.autodesk.com</VendorDescription>
+	</AddIn>
+	<AddIn Type="Application">
+		<Name>Application GPTRevitAPI</Name>
+		<Descrition>Some description for Application GPTRevitAPI</Descrition>
+		<Assembly>GPTRevitAPI.dll</Assembly>
+		<FullClassName>GPTRevitAPI.Helpers.App</FullClassName>
+		<ClientId>7813D783-D4E7-49EA-BD0B-AE10A14D83AF</ClientId>
+		<VendorId>ADSK</VendorId>
+		<VendorDescription>Autodesk, www.autodesk.com</VendorDescription>
+	</AddIn>
+</RevitAddIns>

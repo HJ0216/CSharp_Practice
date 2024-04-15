@@ -9,10 +9,12 @@ CSharp_Practice
 ├── Revit_API  
 │   ├── MyFirstRevitPlugIn_SN  
 │   ├── MyRevitAddIn  
+│   ├── PracticeRevitAPI  
 │   ├── RevitAPIGettingStart  
 │   └── RevitAddInPractice1  
 │  
 └── WPF  
+    ├── CS_Code_Academy  
     ├── CS_Design_Pro  
     ├── CS_WPF_UI_Academy  
     ├── Fast_WPF  
@@ -33,10 +35,12 @@ CSharp_Practice
 ### Revit_API
 * [MyFirstRevitPlugIn_SN](https://www.autodesk.com/support/technical/article/caas/tsarticles/ts/7I2bC1zUr4VjJ3U31uM66K.html)
 * [MyRevitAddIn](https://www.youtube.com/playlist?list=PLPlVTk6RNsNTWtDkAgHxZexRklLEJDK8R)
+* [PracticeRevitAPI](https://www.youtube.com/@BIMCoder)
 * [RevitAPIGettingStart](https://www.youtube.com/playlist?list=PLlyMZ5IcKcci1TvB4qM9S8J-RKp0DhVWO)
 * [RevitAddInPractice1](https://www.youtube.com/playlist?list=PLABAnZRsrrL4xoeLvEmqtayeRC5b5GuwU)
 
 ### WPF
+* [CS_Code_Academy](https://www.youtube.com/@CSharpCodeAcademy)
 * [CS_Design_Pro](https://www.youtube.com/@CSharpDesignPro/videos)
 * [CS_WPF_UI_Academy](https://www.youtube.com/@WpfUI)
 * [Fast_WPF](https://www.udemy.com/course/fast-wpf-in-c-windows-presentation-foundation-for-beginners/?couponCode=ST22FS22724)

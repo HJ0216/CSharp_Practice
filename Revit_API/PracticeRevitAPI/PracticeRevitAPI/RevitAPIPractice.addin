@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+	<AddIn Type="Command">
+		<Name>Command PracticeRevitAPI</Name>
+		<Descrition>Some description for Command PracticeRevitAPI</Descrition>
+		<Assembly>PracticeRevitAPI.dll</Assembly>
+		<FullClassName>PracticeRevitAPI.Helpers.Command</FullClassName>
+		<ClientId>508D0C52-81D8-46A4-9B77-79A1C1FA39E4</ClientId>
+		<VendorId>ADSK</VendorId>
+		<VendorDescription>Autodesk, www.autodesk.com</VendorDescription>
+	</AddIn>
+	<AddIn Type="Application">
+		<Name>Application PracticeRevitAPI</Name>
+		<Descrition>Some description for Application PracticeRevitAPI</Descrition>
+		<Assembly>PracticeRevitAPI.dll</Assembly>
+		<FullClassName>PracticeRevitAPI.Helpers.App</FullClassName>
+		<ClientId>13BAFE5B-A9FA-4BA9-957A-1478BCECAB2C</ClientId>
+		<VendorId>ADSK</VendorId>
+		<VendorDescription>Autodesk, www.autodesk.com</VendorDescription>
+	</AddIn>
+</RevitAddIns>

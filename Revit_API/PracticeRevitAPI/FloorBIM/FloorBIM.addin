@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+	<AddIn Type="Command">
+		<Name>Command FloorBIM</Name>
+		<Descrition>Some description for Command FloorBIM</Descrition>
+		<Assembly>FloorBIM.dll</Assembly>
+		<FullClassName>FloorBIM.Helpers.Command</FullClassName>
+		<ClientId>6236392A-F6AB-447A-83AA-12B889280525</ClientId>
+		<VendorId>ADSK</VendorId>
+		<VendorDescription>Autodesk, www.autodesk.com</VendorDescription>
+	</AddIn>
+</RevitAddIns>

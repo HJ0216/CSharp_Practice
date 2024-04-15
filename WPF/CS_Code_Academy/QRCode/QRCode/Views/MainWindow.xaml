@@ -53,6 +53,12 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="20 0" Orientation="Horizontal">
+                            <StackPanel.InputBindings>
+                                <MouseBinding MouseAction="LeftClick"
+                                              Command="{Binding DataContext.ChangeTabCommand, RelativeSource={RelativeSource AncestorType={x:Type ListView}}}"
+                                              CommandParameter="{Binding ., Mode=TwoWay}"
+                                              />
+                            </StackPanel.InputBindings>
                             <materialDesign:PackIcon Kind="{Binding Icon}" Width="30" Height="30"/>
                             <TextBlock Text="{Binding Title}" 
                                        VerticalAlignment="Center" 
@@ -107,6 +113,5 @@
                                          />
             </StackPanel>
         </Grid>
-        
     </Grid>
 </Window>

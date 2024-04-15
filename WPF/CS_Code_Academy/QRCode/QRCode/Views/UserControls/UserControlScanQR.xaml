@@ -15,13 +15,19 @@
                        Foreground="#D0A2F7"
                        />
             <Image Margin="10"
-                           Width="150" Height="150"
-                           />
+                   Width="150" Height="150"
+                   Source="{Binding ImageScanQr}"
+                   />
+            <TextBox Margin="30 10"
+                     materialDesign:HintAssist.Hint="Saved QR Name"
+                     Text="{Binding TextScanQr}"
+                     />
             <Button HorizontalAlignment="Center"
                     Background="#D0A2F7"
                     BorderBrush="#D0A2F7"
                     materialDesign:ButtonAssist.CornerRadius="10"
                     Margin="5 10"
+                    Command="{Binding ScanQRCommand}"
                     >
                 <StackPanel Orientation="Horizontal">
                     <materialDesign:PackIcon Kind="Qrcode"

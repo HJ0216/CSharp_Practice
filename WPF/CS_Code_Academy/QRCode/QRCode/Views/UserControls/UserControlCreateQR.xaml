@@ -16,6 +16,7 @@
                        />
             <Image Margin="10"
                    Width="150" Height="150"
+                   Source="{Binding ImageQr}"
                    />
             <TextBox Margin="30 10"
                      materialDesign:HintAssist.Hint="Enter Text Here"

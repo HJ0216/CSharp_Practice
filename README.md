@@ -10,6 +10,7 @@ CSharp_Practice
 │   ├── MyFirstRevitPlugIn_SN  
 │   ├── MyRevitAddIn  
 │   ├── PracticeRevitAPI  
+│   ├── PracticeRevitAPI2
 │   ├── RevitAPIGettingStart  
 │   └── RevitAddInPractice1  
 │  
@@ -36,6 +37,7 @@ CSharp_Practice
 * [MyFirstRevitPlugIn_SN](https://www.autodesk.com/support/technical/article/caas/tsarticles/ts/7I2bC1zUr4VjJ3U31uM66K.html)
 * [MyRevitAddIn](https://www.youtube.com/playlist?list=PLPlVTk6RNsNTWtDkAgHxZexRklLEJDK8R)
 * [PracticeRevitAPI](https://www.youtube.com/@BIMCoder)
+* [PracticeRevitAPI2](https://nomadcoder.tistory.com/)
 * [RevitAPIGettingStart](https://www.youtube.com/playlist?list=PLlyMZ5IcKcci1TvB4qM9S8J-RKp0DhVWO)
 * [RevitAddInPractice1](https://www.youtube.com/playlist?list=PLABAnZRsrrL4xoeLvEmqtayeRC5b5GuwU)
 

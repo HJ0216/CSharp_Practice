@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+	<AddIn Type="Command">
+		<Name>Command RevitPipe</Name>
+		<Descrition>Some description for Command RevitPipe</Descrition>
+		<Assembly>RevitPipe.dll</Assembly>
+		<FullClassName>RevitPipe.Class1</FullClassName>
+		<ClientId>5F37953B-297B-479F-967D-24FA6734258B</ClientId>
+		<VendorId>ADSK</VendorId>
+		<VendorDescription>Autodesk, www.autodesk.com</VendorDescription>
+	</AddIn>
+</RevitAddIns>

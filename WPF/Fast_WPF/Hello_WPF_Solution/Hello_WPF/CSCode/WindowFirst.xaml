@@ -1,0 +1,17 @@
+﻿<Window x:Class="Hello_WPF.CSCode.WindowFirst"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hello_WPF.CSCode"
+        mc:Ignorable="d"
+        Title="WindowFirst" Height="300" Width="300">
+    <Grid>
+        <StackPanel HorizontalAlignment="Left">
+            <Button Content="Fisrt"/>
+            <Button Content="Second" Visibility="Hidden"/>
+            <Button Content="Third" Visibility="Collapsed"/>
+            <Button Content="Fourth"/>
+        </StackPanel>
+    </Grid>     
+</Window>

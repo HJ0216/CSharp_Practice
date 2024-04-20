@@ -16,8 +16,4 @@
     <Resource Include="5448846_christmas_gift_socks_xmas_icon.png" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="CSCode\" />
-  </ItemGroup>
-
 </Project>

@@ -1,0 +1,36 @@
+﻿<Window x:Class="Hello_WPF.CSCode.WindowMenuControl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hello_WPF.CSCode"
+        mc:Ignorable="d"
+        Title="WindowMenuControl" Height="450" Width="400">
+    <Grid>
+        <Menu VerticalAlignment="Top"
+              VerticalContentAlignment="Center"
+              >
+            <MenuItem Header="_File">
+                <MenuItem Header="F_ile1"/>
+                <MenuItem Header="Fi_le2">
+                    <MenuItem.Icon>
+                        <Image Source="./loopy2_10.png"/>
+                    </MenuItem.Icon>
+                    <MenuItem Header="File21"/>
+                    <MenuItem Header="File22">
+                        <MenuItem Header="File221"/>
+                        <MenuItem Header="File222"/>
+                        <MenuItem Header="File223"/>
+                    </MenuItem>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="File3"/>
+                <MenuItem Header="File4"/>
+            </MenuItem>
+            <MenuItem Header="E_dit"/>
+            <MenuItem Header="Fo_rmat"/>
+            <MenuItem Header="View"/>
+            <MenuItem Header="About"/>
+        </Menu>
+    </Grid>
+</Window>

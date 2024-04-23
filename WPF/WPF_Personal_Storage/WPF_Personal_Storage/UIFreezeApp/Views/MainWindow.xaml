@@ -1,0 +1,39 @@
+﻿<Window x:Class="UIFreezeApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UIFreezeApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0"
+                    Orientation="Horizontal"
+                    >
+            <Button Content="Open File"
+                    Command="{Binding OpenFileCommand}"
+                    />
+            <ProgressBar/>
+        </StackPanel>
+
+        <DataGrid Grid.Row="1"
+                  ItemsSource="{Binding DataModels}"
+                  AutoGenerateColumns="False"
+                  >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="CompanyName" Binding="{Binding CompanyName}"/>
+                <DataGridTextColumn Header="Location" Binding="{Binding Location}"/>
+                <DataGridTextColumn Header="Sector" Binding="{Binding Sector}"/>
+                <DataGridTextColumn Header="NumberOfEmployees" Binding="{Binding NumberOfEmployees}"/>
+                <DataGridTextColumn Header="NumberOfNewEmployees" Binding="{Binding NumberOfNewEmployees}"/>
+                <DataGridTextColumn Header="NumberOfLeavers" Binding="{Binding NumberOfLeavers}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

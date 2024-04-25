@@ -1,0 +1,41 @@
+﻿<Window x:Class="Dialogs.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dialogs"
+        mc:Ignorable="d"
+        Title="WindowMessageBoxSample" Height="250" Width="300">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel.Resources>
+            <Style TargetType="{x:Type Button}">
+                <Setter Property="Margin" Value="0 0 0 10"/>
+            </Style>
+        </StackPanel.Resources>
+
+        <Button Name="buttonSimpleMessageBox"
+                Click="buttonSimpleMessageBox_Click"
+                Content="Simple MessageBox"
+                />
+        <Button Name="buttonMessageBoxWithTitle"
+                Click="buttonMessageBoxWithTitle_Click"
+                Content="MessageBox with Title"
+                />
+        <Button Name="buttonMessageBoxWithButtons"
+                Click="buttonMessageBoxWithButtons_Click"
+                Content="MessageBox with Buttons"
+                />
+        <Button Name="buttonMessageBoxWithResponse"
+                Click="buttonMessageBoxWithResponse_Click"
+                Content="MessageBox with Response"
+                />
+        <Button Name="buttonMessageBoxWithIcon"
+                Click="buttonMessageBoxWithIcon_Click"
+                Content="MessageBox with Icon"
+                />
+        <Button Name="buttonMessageBoxWithDefaultChoice"
+                Click="buttonMessageBoxWithDefaultChoice_Click"
+                Content="MessageBox with Default Choice"
+                />
+    </StackPanel>
+</Window>

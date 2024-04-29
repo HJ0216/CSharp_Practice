@@ -6,6 +6,19 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>2792955_christmas_father christmas_santa_xmas_icon.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="loopy2_13.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="2792955_christmas_father christmas_santa_xmas_icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="loopy2_13.png" />
+  </ItemGroup>
 
 </Project>

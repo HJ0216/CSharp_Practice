@@ -25,9 +25,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TreeView_Controls", "TreeVi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Styles_Control", "Styles_Control\Styles_Control.csproj", "{8CA5F1A8-71CD-4FB4-9F62-591E4CB94660}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioAndVideo", "AudioAndVideo\AudioAndVideo.csproj", "{61C34F5F-BCEC-48BA-AB7B-4E5F6F8B227F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AudioAndVideo", "AudioAndVideo\AudioAndVideo.csproj", "{61C34F5F-BCEC-48BA-AB7B-4E5F6F8B227F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBinding", "DataBinding\DataBinding.csproj", "{8DBCB625-826B-48B6-AAAA-524275C90608}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataBinding", "DataBinding\DataBinding.csproj", "{8DBCB625-826B-48B6-AAAA-524275C90608}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dialogs", "Dialogs\Dialogs.csproj", "{12A31BF3-5044-41F3-834C-46DA83A38947}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{8DBCB625-826B-48B6-AAAA-524275C90608}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DBCB625-826B-48B6-AAAA-524275C90608}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DBCB625-826B-48B6-AAAA-524275C90608}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12A31BF3-5044-41F3-834C-46DA83A38947}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12A31BF3-5044-41F3-834C-46DA83A38947}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12A31BF3-5044-41F3-834C-46DA83A38947}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12A31BF3-5044-41F3-834C-46DA83A38947}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

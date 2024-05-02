@@ -1,0 +1,114 @@
+﻿<Window x:Class="Hello_WPF.CSCode.WindowNotepad"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hello_WPF.CSCode"
+        mc:Ignorable="d"
+        Title="WindowNotepad" Height="450" Width="800"
+        Icon="pack://application:,,,/Resources/loopy2_12.png"
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0">
+            <Menu.Resources>
+                <Style TargetType="MenuItem">
+                    <Setter Property="Margin" Value="5"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                </Style>
+            </Menu.Resources>
+            <MenuItem Header="_File">
+                <MenuItem Header="New"
+                          Name="newButton"
+                          Click="newButton_Click"
+                          />
+                <MenuItem Header="Open"
+                          Name="openButton"
+                          Click="openButton_Click"
+                          />
+                <MenuItem Header="Save As"
+                          Name="saveAsButton"
+                          Click="saveAsButton_Click"
+                          />
+                <Separator/>
+                <MenuItem Header="Exit"
+                          Name="exitButton"
+                          Click="exitButton_Click"
+                          />
+            </MenuItem>
+            <MenuItem Header="_Edit">
+                <MenuItem Header="Undo"
+                          Name="undoButton"
+                          Click="undoButton_Click"
+                          />
+                <MenuItem Header="Redo"
+                          Name="redoButton"
+                          Click="redoButton_Click"
+                          />
+                <MenuItem Header="Cut"
+                          Name="cutButton"
+                          Click="cutButton_Click"
+                          />
+                <MenuItem Header="Copy"
+                          Name="copyButton"
+                          Click="copyButton_Click"
+                          />
+                <MenuItem Header="Paste"
+                          Name="pasteButton"
+                          Click="pasteButton_Click"
+                          />
+                <MenuItem Header="Select All"
+                          Name="selectAllButton"
+                          Click="selectAllButton_Click"
+                          />
+            </MenuItem>
+            <MenuItem Header="F_ormat">
+                <MenuItem Header="Word Wrap"
+                          IsCheckable="True"
+                          IsChecked="True"
+                          Name="wordWrapButton"
+                          Click="wordWrapButton_Click"
+                          />
+            </MenuItem>
+            <MenuItem Header="_View">
+                <MenuItem Header="Zoom In"
+                          Name="zoonInButton"
+                          Click="zoonInButton_Click"
+                          />
+                <MenuItem Header="Zoom Out"
+                          Name="zoomOutButton"
+                          Click="zoomOutButton_Click"
+                          />
+                <MenuItem Header="Default Zoom"
+                          Name="defaultZoom"
+                          Click="defaultZoom_Click"
+                          />
+            </MenuItem>
+            <MenuItem Header="_About">
+                <MenuItem Header="About Us"
+                          Name="aboutUsButton"
+                          Click="aboutUsButton_Click"
+                          >
+                    <MenuItem.Icon>
+                        <Image Source="pack://application:,,,/Resources/loopy2_11.png"/>
+                    </MenuItem.Icon>
+                    <!--WPF에서 MenuItem의 Icon 속성은 단순 문자열을 받지 않고, 
+                    Image 컨트롤이나 다른 UI 요소를 포함할 수 있는 객체를 기대-->
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+
+        <TextBox Grid.Row="1"
+                 Margin="10"
+                 TextWrapping="Wrap"
+                 AcceptsReturn="True"
+                 Name="textBoxControl"
+                 VerticalScrollBarVisibility="Auto"
+                 HorizontalScrollBarVisibility="Auto"
+                 />
+    </Grid>
+</Window>

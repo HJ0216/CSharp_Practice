@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScrollButton", "ScrollButto
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UIFreezeApp", "UIFreezeApp\UIFreezeApp.csproj", "{FB25F3CC-BB4E-43CF-9B5D-3D1317C12CF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConstructorOverriding", "ConstructorOverriding\ConstructorOverriding.csproj", "{9187C093-058E-4620-AE75-D8423B094293}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstructorOverriding", "ConstructorOverriding\ConstructorOverriding.csproj", "{9187C093-058E-4620-AE75-D8423B094293}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

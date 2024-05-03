@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.Desktop.v23.2">
+      <HintPath>..\..\..\..\..\..\repos\2024_DLCON_FMAutomation-developer\DLCON_Reference\DevExpress\23.2\DevExpress.Data.Desktop.v23.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v23.2">
+      <HintPath>..\..\..\..\..\..\repos\2024_DLCON_FMAutomation-developer\DLCON_Reference\DevExpress\23.2\DevExpress.Data.v23.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Drawing.v23.2">
+      <HintPath>..\..\..\..\..\..\repos\2024_DLCON_FMAutomation-developer\DLCON_Reference\DevExpress\23.2\DevExpress.Drawing.v23.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Images.v23.2">
+      <HintPath>..\..\..\..\..\..\repos\2024_DLCON_FMAutomation-developer\DLCON_Reference\DevExpress\23.2\DevExpress.Images.v23.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm.v23.2">
+      <HintPath>..\..\..\..\..\..\repos\2024_DLCON_FMAutomation-developer\DLCON_Reference\DevExpress\23.2\DevExpress.Mvvm.v23.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v23.2.Core">
+      <HintPath>..\..\..\..\..\..\repos\2024_DLCON_FMAutomation-developer\DLCON_Reference\DevExpress\23.2\DevExpress.Printing.v23.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Accordion.v23.2">
+      <HintPath>..\..\..\..\..\..\repos\2024_DLCON_FMAutomation-developer\DLCON_Reference\DevExpress\23.2\DevExpress.Xpf.Accordion.v23.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Controls.v23.2">
+      <HintPath>..\..\..\..\..\..\repos\2024_DLCON_FMAutomation-developer\DLCON_Reference\DevExpress\23.2\DevExpress.Xpf.Controls.v23.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Core.v23.2">
+      <HintPath>..\..\..\..\..\..\repos\2024_DLCON_FMAutomation-developer\DLCON_Reference\DevExpress\23.2\DevExpress.Xpf.Core.v23.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v23.2">
+      <HintPath>..\..\..\..\..\..\repos\2024_DLCON_FMAutomation-developer\DLCON_Reference\DevExpress\23.2\DevExpress.Xpf.Grid.v23.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v23.2.Core">
+      <HintPath>..\..\..\..\..\..\repos\2024_DLCON_FMAutomation-developer\DLCON_Reference\DevExpress\23.2\DevExpress.Xpf.Grid.v23.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Office2019Colorful.v23.2">
+      <HintPath>..\..\..\..\..\..\repos\2024_DLCON_FMAutomation-developer\DLCON_Reference\DevExpress\23.2\DevExpress.Xpf.Themes.Office2019Colorful.v23.2.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

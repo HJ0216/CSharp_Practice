@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UIFreezeApp", "UIFreezeApp\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstructorOverriding", "ConstructorOverriding\ConstructorOverriding.csproj", "{9187C093-058E-4620-AE75-D8423B094293}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllSelector", "AllSelector\AllSelector.csproj", "{43E49CBD-309F-420E-A5E8-59F3B106BB95}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{9187C093-058E-4620-AE75-D8423B094293}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9187C093-058E-4620-AE75-D8423B094293}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9187C093-058E-4620-AE75-D8423B094293}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43E49CBD-309F-420E-A5E8-59F3B106BB95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43E49CBD-309F-420E-A5E8-59F3B106BB95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43E49CBD-309F-420E-A5E8-59F3B106BB95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43E49CBD-309F-420E-A5E8-59F3B106BB95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

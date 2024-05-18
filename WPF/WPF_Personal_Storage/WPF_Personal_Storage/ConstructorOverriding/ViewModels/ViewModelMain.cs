@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConstructorOverriding.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -79,5 +80,12 @@ namespace ConstructorOverriding.ViewModels
             Data3 = data3;
         }
 
+
+        public void OpenWindowSub1()
+        {
+            WindowSub1 window = new WindowSub1();
+            window.DataContext = new ViewModelSub1();
+            window.Show();
+        }
     }
 }

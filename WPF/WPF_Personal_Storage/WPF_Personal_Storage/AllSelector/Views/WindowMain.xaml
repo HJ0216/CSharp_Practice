@@ -18,6 +18,12 @@
             <CheckBox Content="2"
                       IsChecked="{Binding IsTwoChecked, Mode=TwoWay}"
                       />
+            <CheckBox Content="3"
+                      IsChecked="{Binding IsThreeChecked, Mode=TwoWay}"
+                      />
+            <CheckBox Content="4"
+                      IsChecked="{Binding IsFourChecked, Mode=TwoWay}"
+                      />
         </StackPanel>
     </Grid>
 </Window>

@@ -14,6 +14,7 @@ namespace SocketServerStarter
 
             IPAddress iPAddress = IPAddress.Any;
             // 서버가 모든 네트워크 인터페이스의 클라이언트 연결을 수락
+            // 실제로 0.0.0.0
             IPEndPoint iPEndPoint = new IPEndPoint(iPAddress, 23000);
             // 서버가 해당 포트 번호로 들어오는 연결을 대기할 것임을 나타냄
 

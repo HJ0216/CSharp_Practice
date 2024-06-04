@@ -10,6 +10,13 @@ namespace AllSelector.ViewModels
 {
     class ViewModelMain : INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
         private bool _isAllChecked;
         private bool _isOneChecked;
         private bool _isTwoChecked;
@@ -17,7 +24,29 @@ namespace AllSelector.ViewModels
         private bool _isFourChecked;
         private bool _ignoreCheckAll;
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        private string _initializationConstructor;
+
+        public string InitializationConstructor
+        {
+            get { return _initializationConstructor; }
+            set { _initializationConstructor = value; }
+        }
+
+        private string _initializationField = "Initialize with Field";
+
+        public string InitializationField
+        {
+            get { return _initializationField; }
+            set { _initializationField = value; }
+        }
+
+        private string _initializationBoth = "Initialize with Field";
+
+        public string InitializationBoth
+        {
+            get { return _initializationBoth; }
+            set { _initializationBoth = value; }
+        }
 
         public bool IsAllChecked
         {
@@ -97,6 +126,14 @@ namespace AllSelector.ViewModels
             }
         }
 
+
+        public ViewModelMain()
+        {
+            InitializationConstructor = "Initialize with Constructor";
+            InitializationBoth = "Initialize with Constructor";
+        }
+
+
         private void UpdateIsAllChecked()
         {
             if (!_ignoreCheckAll)
@@ -107,10 +144,6 @@ namespace AllSelector.ViewModels
             }
         }
 
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
     }
     /*    {
             #region INotifyPropertyChanged

@@ -7,7 +7,11 @@
         mc:Ignorable="d"
         Title="WindowMain" Height="300" Width="300">
     <Grid>
-        <StackPanel Orientation="Vertical">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Vertical">
             <CheckBox Content="All"
                       IsChecked="{Binding IsAllChecked, Mode=TwoWay}"
                       />
@@ -24,6 +28,20 @@
             <CheckBox Content="4"
                       IsChecked="{Binding IsFourChecked, Mode=TwoWay}"
                       />
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <StackPanel>
+                <TextBlock Text="생성자를 이용한 초기화"/>
+                <TextBlock Text="{Binding InitializationConstructor}"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="필드를 이용한 초기화"/>
+                <TextBlock Text="{Binding InitializationField}"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="생성자 + 필드"/>
+                <TextBlock Text="{Binding InitializationBoth}"/>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Window>

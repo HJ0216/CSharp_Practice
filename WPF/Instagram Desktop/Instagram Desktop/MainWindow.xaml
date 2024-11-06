@@ -1,0 +1,275 @@
+﻿<Window x:Class="Instagram_Desktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Instagram_Desktop"
+        xmlns:uc="clr-namespace:Instagram_Desktop.UserControls"
+        mc:Ignorable="d"
+        Title="MainWindow" 
+        MinHeight="710" Height="710" MinWidth="930" Width="1210"
+        FontFamily="Cambria"
+        Background="White"
+        WindowStartupLocation="CenterScreen"
+        >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <!--Main Menu-->
+        <StackPanel Grid.RowSpan="2" Background="#F3F3F3">
+            <Image Source="/Images/instagram.png"
+                   RenderOptions.BitmapScalingMode="HighQuality"
+                   Height="70" 
+                   Margin="0 25 0 25"
+                   />
+            <uc:Profile PaddingNum="5" Size="100" Source="/Images/user.png"/>
+            <TextBlock Text="User name"
+                       Margin="0 10 0 5"
+                       TextAlignment="Center"
+                       FontSize="20" FontWeight="SemiBold"
+                       />
+            <TextBlock Text="@UserId"
+                       TextAlignment="Center"
+                       FontSize="14"
+                       Foreground="#9A9A9A"
+                       />
+
+            <Grid Margin="15 25">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="6.9K" Style="{StaticResource mainText}"/>
+                    <TextBlock Text="Followers" Style="{StaticResource secondaryText}"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <TextBlock Text="34" Style="{StaticResource mainText}"/>
+                    <TextBlock Text="Posts" Style="{StaticResource secondaryText}"/>
+                </StackPanel>
+                <StackPanel Grid.Column="2">
+                    <TextBlock Text="112" Style="{StaticResource mainText}"/>
+                    <TextBlock Text="Followings" Style="{StaticResource secondaryText}"/>
+                </StackPanel>
+            </Grid>
+
+            <Button Style="{StaticResource activeMenuButton}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Images/feed.png"
+                           RenderOptions.BitmapScalingMode="HighQuality"
+                           Style="{StaticResource menuButtonIcon}"/>
+                    <TextBlock Text="Feed" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Button Style="{StaticResource menuButton}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Images/explore.png"
+                           RenderOptions.BitmapScalingMode="HighQuality"
+                           Style="{StaticResource menuButtonIcon}"/>
+                    <TextBlock Text="Explore" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+            
+            <Button Style="{StaticResource menuButton}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Images/notifications.png"
+                           RenderOptions.BitmapScalingMode="HighQuality"
+                           Style="{StaticResource menuButtonIcon}"/>
+                    <TextBlock Text="Notifications" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+            
+            <Button Style="{StaticResource menuButton}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Images/message.png"
+                           RenderOptions.BitmapScalingMode="HighQuality"
+                           Style="{StaticResource menuButtonIcon}"/>
+                    <TextBlock Text="Message" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+            
+            <Button Style="{StaticResource menuButton}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Images/direct.png"
+                           RenderOptions.BitmapScalingMode="HighQuality"
+                           Style="{StaticResource menuButtonIcon}"/>
+                    <TextBlock Text="Direct" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+            
+            <Button Style="{StaticResource menuButton}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Images/stats.jpg"
+                           RenderOptions.BitmapScalingMode="HighQuality"
+                           Style="{StaticResource menuButtonIcon}"/>
+                    <TextBlock Text="Stats" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+            
+            <Button Style="{StaticResource menuButton}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Images/settings.png"
+                           RenderOptions.BitmapScalingMode="HighQuality"
+                           Style="{StaticResource menuButtonIcon}"/>
+                    <TextBlock Text="Settings" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Separator Margin="40 15"
+                       Background="#CACACA"
+                       Opacity="0.6"
+                       />
+
+            <Button Style="{StaticResource menuButton}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Images/logout.png"
+                           RenderOptions.BitmapScalingMode="HighQuality"
+                           Style="{StaticResource menuButtonIcon}"/>
+                    <TextBlock Text="Logout" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+        </StackPanel>
+
+        <!--Top Part-->
+        <StackPanel Grid.Column="1">
+            <!--Top Menu-->
+            <Grid Margin="35 25 35 20">
+                <!--Textbox Search-->
+                <Border Width="220"
+                        HorizontalAlignment="Left"
+                        CornerRadius="5"
+                        Background="#F3F3F3"
+                        BorderBrush="#F3F3F3" BorderThickness="1"
+                        >
+                    <Grid Margin="7 9">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Image Source="/Images/explore.png"
+                               RenderOptions.BitmapScalingMode="HighQuality"
+                               Height="20"
+                               Margin="5 0 0 0"
+                               />
+                        <TextBlock Text="Search" 
+                                   x:Name="txtBlockSearch" 
+                                   MouseDown="txtBlockSearch_MouseDown"
+                                   Style="{StaticResource txtBlockHint}"
+                                   />
+                        <TextBox x:Name="txtSearch" 
+                                 TextChanged="txtSearch_TextChanged"
+                                 Style="{StaticResource txtBox}"
+                                 />
+                    </Grid>
+                </Border>
+
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Right"
+                            >
+                    <Button Style="{StaticResource roundButton}">
+                        <Image Source="/Images/notifications.png"
+                               RenderOptions.BitmapScalingMode="HighQuality"
+                               Width="22"
+                               />
+                    </Button>
+                    <Button Style="{StaticResource roundButton}">
+                        <Image Source="/Images/message.png"
+                               RenderOptions.BitmapScalingMode="HighQuality"
+                               Width="22"
+                               />
+                    </Button>
+                    <Button Style="{StaticResource addButton}">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                            <Image Source="/Images/add.png"
+                               RenderOptions.BitmapScalingMode="HighQuality"
+                               Width="23"
+                                   Margin="0 0 7 0"
+                               />
+                            <TextBlock Text="Add Post"
+                                       VerticalAlignment="Center"
+                                       />
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </Grid>
+
+            <Grid Margin="35 0 35 15">
+                <TextBlock Text="Stories"
+                           HorizontalAlignment="Left"
+                           Foreground="#333333"
+                           FontSize="20" FontWeight="Bold"
+                           />
+                <Label Content="Watch All"
+                       HorizontalAlignment="Right"
+                       Style="{StaticResource txtButton}"
+                       />
+            </Grid>
+
+            <ScrollViewer Margin="35 0" Padding="0 0 0 10"
+                          VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto"
+                          >
+                <StackPanel Orientation="Horizontal">
+                    <uc:Profile Size="70" PaddingNum="5" Source="/Images/p1.png"/>
+                    <uc:Profile Margin="10 0 0 0" PaddingNum="5" Size="70" Source="/Images/p2.png"/>
+                    <uc:Profile Margin="10 0 0 0" PaddingNum="5" Size="70" Source="/Images/p3.png"/>
+                    <uc:Profile Margin="10 0 0 0" PaddingNum="5" Size="70" Source="/Images/p4.png"/>
+                    <uc:Profile Margin="10 0 0 0" PaddingNum="5" Size="70" Source="/Images/p5.png"/>
+                    <uc:Profile Margin="10 0 0 0" PaddingNum="5" Size="70" Source="/Images/p6.png"/>
+                    <uc:Profile Margin="10 0 0 0" PaddingNum="5" Size="70" Source="/Images/p7.png"/>
+                    <uc:Profile Margin="10 0 0 0" PaddingNum="5" Size="70" Source="/Images/p8.png"/>
+                    <uc:Profile Margin="10 0 0 0" PaddingNum="5" Size="70" Source="/Images/p9.png"/>
+                </StackPanel>
+            </ScrollViewer>
+
+            <Grid Margin="35 20">
+                <Label Content="Feed"
+                       HorizontalAlignment="Left"
+                       Foreground="#333333"
+                       FontSize="20" FontWeight="Black"
+                       />
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Label Content="Latest" Style="{StaticResource activeTxtButton}"/>
+                    <Label Content="Popular" 
+                           Margin="15 0 0 0"
+                           Style="{StaticResource txtButton}"
+                           />
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+
+        <!--Post-->
+        <ScrollViewer Grid.Column="1" Grid.Row="1"
+                      Margin="30 0 30 10"
+                      VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled"
+                      >
+            <WrapPanel>
+                <uc:Post ProfileSource="/Images/p3.png" ProfileName="Loopy" PostSource="/Images/q1.png" Likes="6.2k" Comments="49"/>
+                <uc:Post ProfileSource="/Images/p2.png" ProfileName="Loopy" PostSource="/Images/q2.png" Likes="6.2k" Comments="49"/>
+                <uc:Post ProfileSource="/Images/p1.png" ProfileName="Loopy" PostSource="/Images/q3.png" Likes="6.2k" Comments="49"/>
+                <uc:Post ProfileSource="/Images/p9.png" ProfileName="Loopy" PostSource="/Images/q4.png" Likes="6.2k" Comments="49"/>
+                <uc:Post ProfileSource="/Images/p8.png" ProfileName="Loopy" PostSource="/Images/q5.png" Likes="6.2k" Comments="49"/>
+                <uc:Post ProfileSource="/Images/p7.png" ProfileName="Loopy" PostSource="/Images/q6.png" Likes="6.2k" Comments="49"/>
+                <uc:Post ProfileSource="/Images/p6.png" ProfileName="Loopy" PostSource="/Images/q7.png" Likes="6.2k" Comments="49"/>
+                <uc:Post ProfileSource="/Images/p5.png" ProfileName="Loopy" PostSource="/Images/q8.png" Likes="6.2k" Comments="49"/>
+                <uc:Post ProfileSource="/Images/p4.png" ProfileName="Loopy" PostSource="/Images/q9.png" Likes="6.2k" Comments="49"/>
+                <uc:Post ProfileSource="/Images/p3.png" ProfileName="Loopy" PostSource="/Images/q10.png" Likes="6.2k" Comments="49"/>
+                <uc:Post ProfileSource="/Images/p2.png" ProfileName="Loopy" PostSource="/Images/q11.png" Likes="6.2k" Comments="49"/>
+                <uc:Post ProfileSource="/Images/p1.png" ProfileName="Loopy" PostSource="/Images/q12.png" Likes="6.2k" Comments="49"/>
+            </WrapPanel>
+        </ScrollViewer>
+        
+    </Grid>
+</Window>

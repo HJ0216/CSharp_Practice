@@ -1,0 +1,234 @@
+﻿<Window x:Class="CardWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CardWpf"
+        mc:Ignorable="d"
+        Title="MainWindow" 
+        Height="800" Width="800"
+        WindowStartupLocation="CenterScreen" WindowStyle="None"
+        AllowsTransparency="True" Background="Transparent"
+        >
+    <Grid>
+        <!--Panel-->
+        <Border Height="500"
+                Margin="0 200 0 0"
+                Background="#252525"
+                VerticalAlignment="Top"
+                >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="130"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="1">
+                    <TextBlock Text="Card Number"
+                               Margin="100 0 0 0"
+                               Foreground="#FFFFFF"
+                               FontSize="15"
+                               />
+                    <Border Style="{StaticResource borderStyle}"
+                            Height="45" Width="600"
+                            CornerRadius="5"
+                            >
+                        <TextBox x:Name="tbCardXPnl"
+                                 Height="40" Width="595"
+                                 Foreground="#FFFFFF" Background="Transparent"
+                                 VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center"
+                                 FontSize="25"
+                                 TextChanged="tbCardXPnl_TextChanged"
+                                 />
+                    </Border>
+                    
+                    <TextBlock Text="Card Holder"
+                               Margin="100 0 0 0"
+                               Foreground="#FFFFFF"
+                               FontSize="15"
+                               />
+                    <Border Style="{StaticResource borderStyle}"
+                            Height="45" Width="600"
+                            CornerRadius="5"
+                            >
+                        <TextBox x:Name="tbHolderXPnl"
+                                 Height="40" Width="595"
+                                 Foreground="#FFFFFF" Background="Transparent"
+                                 VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center"
+                                 FontSize="25"
+                                 TextChanged="tbHolderXPnl_TextChanged"
+                                 />
+                    </Border>
+                    
+                    <Grid Height="45" Width="600">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <ComboBox x:Name="dateCbx"
+                                  Grid.Column="0" Margin="3"
+                                  VerticalAlignment="Center"
+                                  FontSize="20"
+                                  SelectionChanged="dateCbx_SelectionChanged"
+                                  >
+                            <ComboBox.Resources>
+                                <SolidColorBrush x:Key="{x:Static SystemColors.WindowBrushKey}" Color="#A3B2F1"/>
+                            </ComboBox.Resources>
+                        </ComboBox>
+
+                        <ComboBox Name="monthCbx"
+                                  Grid.Column="1" Margin="3"
+                                  VerticalAlignment="Center"
+                                  FontSize="20"
+                                  SelectionChanged="monthCbx_SelectionChanged"
+                                  >
+                            <ComboBox.Resources>
+                                <SolidColorBrush x:Key="{x:Static SystemColors.WindowBrushKey}" Color="#A3B2F1"/>
+                            </ComboBox.Resources>
+                        </ComboBox>
+
+                        <Border Grid.Column="2"
+                                Margin="3"
+                                Background="#4764E2" Opacity="0.5"
+                                >
+                            <TextBox Name="tbxCvv"
+                                     Height="40" Width="190" Margin="3"
+                                     Foreground="#FFFFFF"
+                                     BorderThickness="0"
+                                     VerticalAlignment="Center" HorizontalAlignment="Left" HorizontalContentAlignment="Center"
+                                     FontSize="25"
+                                     Style="{StaticResource disableEnableTextBlock}"
+                                     TextChanged="tbxCvv_TextChanged"
+                                     />
+                        </Border>
+                    </Grid>
+
+                    <Border Width="400" Height="50" Margin="0 30 0 0"
+                            CornerRadius="7"
+                            Style="{StaticResource buttonStyle}"
+                            >
+                        <TextBlock Text="Submit"
+                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                   Foreground="#FFFFFF"
+                                   FontSize="20"
+                                   />
+                    </Border>
+                </StackPanel>
+            </Grid>
+        </Border>
+        
+        <!--Card-->
+        <Border Width="500" Height="300" Margin="0"
+                VerticalAlignment="Top"
+                CornerRadius="30"
+                >
+            <Border.Background>
+                <ImageBrush ImageSource="/Images/p7.png"/>
+            </Border.Background>
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="50" Opacity="0.8" Direction="-75"/>
+            </Border.Effect>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="20"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Border Grid.Row="0" Grid.Column="1"
+                        Width="50" Height="50" Margin="10 15 0 0"
+                        VerticalAlignment="Top" HorizontalAlignment="Left"
+                        CornerRadius="5"
+                        >
+                    <Border.Background>
+                        <ImageBrush ImageSource="/Images/p8.png"/>
+                    </Border.Background>
+                </Border>
+
+                <Border Grid.Row="0" Grid.Column="4"
+                        Width="50" Height="50" Margin="0 10 10 0"
+                        VerticalAlignment="Top" HorizontalAlignment="Right"
+                        CornerRadius="5"
+                        >
+                    <Border.Background>
+                        <ImageBrush ImageSource="/Images/p9.png"
+                                    Stretch="Uniform"
+                                    />
+                    </Border.Background>
+                </Border>
+
+                <TextBlock x:Name="num1"
+                           Grid.Row="1" Grid.Column="1"
+                           Text="* * * *"
+                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                           Foreground="#FFFFFF"
+                           FontSize="25"
+                           />
+                <TextBlock x:Name="num2"
+                           Grid.Row="1" Grid.Column="2"
+                           Text="* * * *"
+                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                           Foreground="#FFFFFF"
+                           FontSize="25"
+                           />
+                <TextBlock x:Name="num3"
+                           Grid.Row="1" Grid.Column="3"
+                           Text="* * * *"
+                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                           Foreground="#FFFFFF"
+                           FontSize="25"
+                           />
+                <TextBlock x:Name="num4"
+                           Grid.Row="1" Grid.Column="4"
+                           Text="* * * *"
+                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                           Foreground="#FFFFFF"
+                           FontSize="25"
+                           />
+
+                <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"
+                           Margin="0 10 0 0"
+                           VerticalAlignment="Top" HorizontalAlignment="Left"
+                           FontSize="15"
+                           Foreground="#FFFFFF"
+                           Text="Card Holder"
+                           />
+
+                <TextBlock x:Name="cardHolder" 
+                           Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"
+                           VerticalAlignment="Center"
+                           FontSize="20"
+                           Foreground="#FFFFFF"
+                           Text="Loan Code"
+                           />
+
+                <TextBlock Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="2"
+                           Margin="0 10 0 0"
+                           VerticalAlignment="Top" HorizontalAlignment="Center"
+                           FontSize="15"
+                           Foreground="#FFFFFF"
+                           Text="VALID THRU"
+                           />
+
+                <TextBlock x:Name="monYearCard" 
+                           Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="2"
+                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                           FontSize="20"
+                           Foreground="#FFFFFF"
+                           Text="11/24"
+                           />
+
+            </Grid>
+        </Border>
+
+    </Grid>
+</Window>

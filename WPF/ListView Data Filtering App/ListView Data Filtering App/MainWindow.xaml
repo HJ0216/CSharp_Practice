@@ -1,0 +1,42 @@
+﻿<Window x:Class="ListView_Data_Filtering_App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListView_Data_Filtering_App"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListView x:Name="myList"
+                  Margin="0 50 0 0"
+                  >
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="Name"
+                                        DisplayMemberBinding="{Binding Name}"
+                                        />
+                        <GridViewColumn Header="Country"
+                                        DisplayMemberBinding="{Binding Country}"
+                                        />
+                        <GridViewColumn Header="Status"
+                                        DisplayMemberBinding="{Binding Status}"
+                                        />
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <ComboBox x:Name="filterBy"
+                  Width="180" Margin="5 15 0 0"
+                  VerticalAlignment="Top" HorizontalAlignment="Left"
+                  SelectedIndex="0"
+                  SelectionChanged="filterBy_SelectionChanged"
+                  />
+        <TextBox x:Name="filterTextbox"
+                 Width="180" Margin="210 20 0 0"
+                 VerticalAlignment="Top" HorizontalAlignment="Left"
+                 TextChanged="filterTextbox_TextChanged"
+                 />
+    </Grid>
+</Window>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListView Data Filtering App", "ListView Data Filtering App\ListView Data Filtering App.csproj", "{364A3841-1F80-4B38-8509-80D4D2F6E029}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{364A3841-1F80-4B38-8509-80D4D2F6E029}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{364A3841-1F80-4B38-8509-80D4D2F6E029}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{364A3841-1F80-4B38-8509-80D4D2F6E029}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{364A3841-1F80-4B38-8509-80D4D2F6E029}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {64F409E1-E407-4005-AB65-D69018A8EE21}
+	EndGlobalSection
+EndGlobal
